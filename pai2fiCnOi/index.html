@@ -1,0 +1,640 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Note 17. 性能加速 | 毛线百科MX Wiki</title>
+<meta name="description" content="欢迎来到毛线百科!毛线百科 MX-Wiki成立于2025 年， 热爱如星火，点聚而燎原" />
+<link rel="shortcut icon" href="https://mx.nna.lat/favicon.ico">
+<link rel="stylesheet" href="https://mx.nna.lat/styles/main.css">
+
+<script src="https://mx.nna.lat/media/js/jquery.min.js"></script>
+<script src="https://mx.nna.lat/media/js/masonry.pkgd.min.js"></script>
+<script src="https://mx.nna.lat/media/js/aos.js"></script>
+<script src="https://mx.nna.lat/media/js/pace.min.js"></script>
+<script src="https://mx.nna.lat/media/js/view-image.min.js"></script>
+<script src="https://mx.nna.lat/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://mx.nna.lat/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="文/Prorise
+
+Note 17. 性能加速：Spring Cache 与 Redis 分布式缓存
+{% note default flat %}
+摘要: 本章我们将学习如何利用 缓存 解决数据库读压力过大的问题。我们将引入业界标准的 ..." />
+    <meta name="keywords" content="" />
+    <script src="https://mx.nna.lat/media/js/waterfall.min.js"></script>
+    <script src="https://mx.nna.lat/media/js/prism.min.js"></script>
+  </head>
+  <body>
+            <header id="header" class="grid-container">
+        <!-- start: .menu-wrapper -->
+        <div class="menu-mobile"> 
+          <i class="fa fa-reorder"></i>
+        </div>
+        <div class="menu-wrapper">
+          <div class="">
+            <div class="logo">
+              <a href="https://mx.nna.lat"><img src="\media\images\custom-headerLogo.png" alt=""></a>
+            </div>
+            <!-- start: .main-nav -->
+
+            <nav class="main-nav grid-container grid-parent">
+              <ul id="menu-header" class="menu gradient-effect">
+                <li class=""><a href="https://mx.nna.lat" class="menu">首页</a></li>
+                
+                  <li class="" >
+                    <a href="/friends" class="menu">
+                      人物一览
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/ii" class="menu">
+                      更新日志
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="https://mx.nna.lat/group" class="menu">
+                      加入读编交流群
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/find.html" class="menu">
+                      编号查询
+                    </a>
+                  </li>
+                
+                <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox" class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
+              </ul>
+            </nav>
+            <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i class="fa fa-search-line"></i></a>
+            <!-- end: .main-nav -->
+            <div class="clear"></div>
+            <div class="border hide-on-tablet hide-on-mobile"></div>
+          </div>    
+          <div class="clear"></div>
+        </div>
+        <!-- end: .menu-wrapper -->
+        <div class="clear"></div>
+      </header>
+      <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
+        <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
+          <div class="search-wrapper section">
+            <form id="gridea-search-form" data-update="1766318686562" action="/search/index.html" class="search-form" _lpchecked="1">
+              <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
+              <button type="submit" class="submit" aria-label="Submit">
+                <i class="fa fa-search-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://mx.nna.lat/post-images/pai2fiCnOi.webp');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2025-12-16"><i class="fa fa-calendar"></i><span class="lately">5 天前</span></time>
+              
+              <a href="https://mx.nna.lat/pai2fiCnOi/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/pai2fiCnOi/"> </span>
+              </a>
+              <span id="/pai2fiCnOi/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+              </div>
+              <h1 class="title ularge white bold">Note 17. 性能加速</h1>
+            </div>
+          </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>文/Prorise</p>
+<!-- more -->
+<h1 id="note-17-性能加速spring-cache-与-redis-分布式缓存">Note 17. 性能加速：Spring Cache 与 Redis 分布式缓存</h1>
+<p>{% note default flat %}<br>
+<strong>摘要</strong>: 本章我们将学习如何利用 <strong>缓存</strong> 解决数据库读压力过大的问题。我们将引入业界标准的 <strong>Redis</strong>，并掌握 Spring Cache 的核心抽象（<code>@Cacheable</code> 三剑客）。我们将重点解决 Redis 的 <strong>JSON 序列化配置</strong> 这一关键痛点，并实战演示如何通过注解实现自动的缓存读写与失效管理。<br>
+{% endnote %}</p>
+<p><strong>本章学习路径</strong></p>
+<ol>
+<li><strong>架构认知</strong>：理解 Spring Cache 抽象层与 Redis 实现层的关系。</li>
+<li><strong>环境集成</strong>：引入 Redis 依赖，配置连接池。</li>
+<li><strong>关键配置</strong>：<strong>自定义 CacheManager</strong>，将默认的 JDK 二进制序列化改为通用的 JSON 格式。</li>
+<li><strong>业务实战</strong>：使用注解改造 Service 层，实现自动缓存。</li>
+</ol>
+<hr>
+<h2 id="171-缓存抽象spring-cache-的设计哲学">17.1. 缓存抽象：Spring Cache 的设计哲学</h2>
+<p>Spring Cache 不是一种具体的缓存实现（像 Redis 或 Ehcache 那样），而是一套 <strong>接口规范</strong>（类似 JDBC）。</p>
+<p>它的核心理念是：<strong>业务代码只与注解打交道，不关心底层用什么缓存</strong>。</p>
+<h3 id="1711-注解三剑客">17.1.1. 注解三剑客</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">注解</th>
+<th style="text-align:left">核心作用</th>
+<th style="text-align:left">执行时机</th>
+<th style="text-align:left">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong><code>@Cacheable</code></strong></td>
+<td style="text-align:left"><strong>查缓存</strong></td>
+<td style="text-align:left">方法执行 <strong>前</strong>。命中则直接返回，未命中则执行方法并存入缓存。</td>
+<td style="text-align:left"><strong>查询</strong> (SELECT)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>@CachePut</code></strong></td>
+<td style="text-align:left"><strong>更新缓存</strong></td>
+<td style="text-align:left">方法执行 <strong>后</strong>。将方法的返回值更新到缓存中。</td>
+<td style="text-align:left"><strong>新增/修改</strong> (INSERT/UPDATE)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>@CacheEvict</code></strong></td>
+<td style="text-align:left"><strong>删缓存</strong></td>
+<td style="text-align:left">方法执行 <strong>后</strong>（默认）。从缓存中移除指定数据。</td>
+<td style="text-align:left"><strong>删除</strong> (DELETE)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1712-核心属性">17.1.2. 核心属性</h3>
+<ul>
+<li><strong><code>value</code> / <code>cacheNames</code></strong>：缓存的名称（相当于 Redis 中的 Key 前缀，或命名空间）。</li>
+<li><strong><code>key</code></strong>：缓存的唯一标识。支持 <strong>SpEL 表达式</strong>（如 <code>#id</code>, <code>#user.id</code>）。</li>
+</ul>
+<hr>
+<h2 id="172-实战-集成-redis">17.2. [实战] 集成 Redis</h2>
+<p>虽然 Spring Boot 支持简单的 Map 内存缓存，但在生产环境中，<strong>Redis</strong> 是分布式缓存的唯一选择。</p>
+<h3 id="1721-引入依赖">17.2.1. 引入依赖</h3>
+<p><strong>文件路径</strong>: <code>pom.xml</code></p>
+<pre><code class="language-xml">&lt;dependencies&gt;
+    &lt;!-- Redis 核心依赖 --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    
+    &lt;!-- 连接池依赖 (Spring Boot 2.x+ 默认使用 Lettuce，推荐配合连接池) --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-pool2&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<h3 id="1722-配置连接">17.2.2. 配置连接</h3>
+<p><strong>文件路径</strong>: <code>src/main/resources/application.yml</code></p>
+<pre><code class="language-yaml">spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      # password: 123456
+      database: 0
+      lettuce:
+        pool:
+          max-active: 8 # 最大连接数
+          max-wait: -1ms # 最大等待时间
+</code></pre>
+<h3 id="1723-开启缓存">17.2.3. 开启缓存</h3>
+<p>在启动类上添加注解。</p>
+<p><strong>文件路径</strong>: <code>src/main/java/com/example/demo/DemoApplication.java</code></p>
+<pre><code class="language-java">@EnableCaching // 关键：开启缓存注解支持
+@SpringBootApplication
+public class DemoApplication { ... }
+</code></pre>
+<hr>
+<h2 id="173-关键-配置-json-序列化">17.3. [关键] 配置 JSON 序列化</h2>
+<p><strong>痛点</strong>：<br>
+Spring Boot 默认使用 JDK 序列化 (<code>JdkSerializationRedisSerializer</code>)。</p>
+<ul>
+<li><strong>缺点</strong>：生成的 Redis 数据是乱码（二进制流），无法人工阅读，且 Java 对象必须实现 <code>Serializable</code> 接口。</li>
+<li><strong>目标</strong>：我们希望 Redis 里存的是清晰的 <strong>JSON</strong> 字符串。</li>
+</ul>
+<p>我们需要自定义 <code>RedisCacheConfiguration</code>。</p>
+<p><strong>文件路径</strong>: <code>src/main/java/com/example/demo/config/CacheConfig.java</code></p>
+<pre><code class="language-java">package com.example.demo.config;
+
+import org.springframework.boot.autoconfigure.cache.RedisCacheManagerBuilderCustomizer;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializationContext;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+import java.time.Duration;
+
+@Configuration
+@EnableCaching
+public class CacheConfig {
+
+    /**
+     * 配置 Redis 缓存的序列化方式和过期时间
+     */
+    @Bean
+    public RedisCacheConfiguration redisCacheConfiguration() {
+        return RedisCacheConfiguration.defaultCacheConfig()
+                // 1. 设置 Key 为 String 序列化
+                .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
+                // 2. 设置 Value 为 JSON 序列化 (GenericJackson2JsonRedisSerializer)
+                .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer()))
+                // 3. 设置默认过期时间为 1 小时 (防止缓存雪崩)
+                .entryTtl(Duration.ofHours(1))
+                // 4. 不缓存 null 值
+                .disableCachingNullValues();
+    }
+}
+</code></pre>
+<hr>
+<h2 id="174-实战-改造-service-层">17.4. [实战] 改造 Service 层</h2>
+<p>现在，我们为 <code>UserService</code> 添加缓存逻辑。</p>
+<p><strong>文件路径</strong>: <code>src/main/java/com/example/demo/service/impl/UserServiceImpl.java</code></p>
+<pre><code class="language-java">@Service
+public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    /**
+     * 查询：先查缓存，没有再查库
+     * cacheNames = &quot;users&quot;: Redis Key 的前缀
+     * key = &quot;#id&quot;: 使用参数 id 作为 Key 的后缀
+     * 最终 Redis Key: &quot;users::1&quot;
+     */
+    @Override
+    @Cacheable(cacheNames = &quot;users&quot;, key = &quot;#id&quot;)
+    public UserVO getUserById(Long id) {
+        // 模拟耗时操作，验证缓存是否生效
+        System.out.println(&quot;--- 查询数据库 ---&quot;);
+        User user = userMapper.selectById(id);
+        return convertToVO(user);
+    }
+
+    /**
+     * 更新：修改数据库后，自动更新缓存
+     * 注意：方法返回值必须是更新后的数据，Spring 会把返回值放入缓存
+     */
+    @Override
+    @CachePut(cacheNames = &quot;users&quot;, key = &quot;#user.id&quot;)
+    public UserVO updateUser(User user) {
+        userMapper.updateById(user);
+        return convertToVO(userMapper.selectById(user.getId()));
+    }
+
+    /**
+     * 删除：删除数据库后，自动删除缓存
+     */
+    @Override
+    @CacheEvict(cacheNames = &quot;users&quot;, key = &quot;#id&quot;)
+    public void deleteUser(Long id) {
+        userMapper.deleteById(id);
+    }
+}
+</code></pre>
+<hr>
+<h2 id="175-验证效果">17.5. 验证效果</h2>
+<ol>
+<li>
+<p><strong>第一次查询</strong>：</p>
+<ul>
+<li>调用 <code>GET /users/1</code>。</li>
+<li>控制台打印 <code>--- 查询数据库 ---</code>。</li>
+<li>Redis 中出现 Key <code>users::1</code>，Value 为 JSON 字符串。</li>
+</ul>
+</li>
+<li>
+<p><strong>第二次查询</strong>：</p>
+<ul>
+<li>再次调用 <code>GET /users/1</code>。</li>
+<li>控制台 <strong>没有</strong> 打印日志，说明数据库未被访问，直接走了缓存。</li>
+</ul>
+</li>
+<li>
+<p><strong>更新数据</strong>：</p>
+<ul>
+<li>调用 <code>POST /users/update</code> 修改数据。</li>
+<li>Redis 中的 <code>users::1</code> 值自动更新。</li>
+</ul>
+</li>
+<li>
+<p><strong>再次查询</strong>：</p>
+<ul>
+<li>调用 <code>GET /users/1</code>，返回的是更新后的新数据。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="176-本章总结与缓存速查">17.6. 本章总结与缓存速查</h2>
+<p><strong>摘要回顾</strong><br>
+本章我们为应用装上了“加速器”。通过集成 Redis 和 Spring Cache，我们仅用几个注解就实现了标准的缓存读写策略（Cache-Aside Pattern）。特别需要注意的是 JSON 序列化的配置，这是让 Redis 数据具备可读性和通用性的关键。</p>
+<p><strong>遇到以下 3 种缓存场景时，请直接参考代码模版：</strong></p>
+<h3 id="1-场景一标准单体查询缓存">1. 场景一：标准单体查询缓存</h3>
+<p><strong>需求</strong>：根据 ID 查询详情，缓存 1 小时（配置中设置）。<br>
+<strong>模版</strong>：</p>
+<pre><code class="language-java">@Cacheable(cacheNames = &quot;product&quot;, key = &quot;#id&quot;)
+public Product getProduct(Long id) { ... }
+</code></pre>
+<h3 id="2-场景二组合键缓存">2. 场景二：组合键缓存</h3>
+<p><strong>需求</strong>：根据“类型”和“城市”查询列表，Key 需要唯一。<br>
+<strong>模版</strong>：</p>
+<pre><code class="language-java">// Redis Key: &quot;shops::Food:Beijing&quot;
+@Cacheable(cacheNames = &quot;shops&quot;, key = &quot;#type + ':' + #city&quot;)
+public List&lt;Shop&gt; getShops(String type, String city) { ... }
+</code></pre>
+<h3 id="3-场景三清空整个缓存分区">3. 场景三：清空整个缓存分区</h3>
+<p><strong>需求</strong>：后台修改了全局配置，需要清空所有 <code>config</code> 缓存。<br>
+<strong>模版</strong>：</p>
+<pre><code class="language-java">@CacheEvict(cacheNames = &quot;config&quot;, allEntries = true)
+public void reloadConfig() { ... }
+</code></pre>
+<h3 id="4-核心避坑指南">4. 核心避坑指南</h3>
+<ol>
+<li>
+<p><strong>缓存不生效 (自调用)</strong></p>
+<ul>
+<li><strong>现象</strong>：<code>this.getUserById(1)</code> 仍然查数据库。</li>
+<li><strong>原因</strong>：和 <code>@Transactional</code> 一样，<code>@Cacheable</code> 基于 AOP 代理。类内部自调用不走代理。</li>
+<li><strong>对策</strong>：外部调用，或注入 <code>self</code> 代理对象调用。</li>
+</ul>
+</li>
+<li>
+<p><strong>序列化异常</strong></p>
+<ul>
+<li><strong>现象</strong>：报错 <code>NotSerializableException</code> 或 JSON 解析错误。</li>
+<li><strong>原因</strong>：对象没有无参构造器（Jackson 需要），或者存入和读取时的序列化配置不一致。</li>
+<li><strong>对策</strong>：确保 DTO/VO 有 <code>@Data</code> (含无参构造)，且 Redis 配置统一。</li>
+</ul>
+</li>
+<li>
+<p><strong>缓存一致性</strong></p>
+<ul>
+<li><strong>现象</strong>：数据库改了，缓存还是旧的。</li>
+<li><strong>原因</strong>：忘记加 <code>@CachePut</code> 或 <code>@CacheEvict</code>；或者手动改了数据库但没清缓存。</li>
+<li><strong>对策</strong>：保证所有数据修改入口都加上了缓存更新注解；设置合理的 TTL (过期时间) 作为最后一道防线。</li>
+</ul>
+</li>
+</ol>
+<hr>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mx.nna.lat/post-images/000010.webp');"></div>
+                 <a href="https://mx.nna.lat/000010/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2025-12-19">2025-12-19</time>
+                  <h4 class="title white no-margin">刘智辰</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mx.nna.lat/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mx.nna.lat/post-images/000009.webp');"></div>
+                 <a href="https://mx.nna.lat/000009/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2025-12-13">2025-12-13</time>
+                  <h4 class="title white no-margin">户晨风</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mx.nna.lat/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="widgets row gradient-effect">
+            <div class="default-sidebar border-effect">
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
+                  <h4 class="widget-title title white bordered">最新文章</h4>
+                  
+                  
+                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://mx.nna.lat/000016/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://mx.nna.lat/post-images/000016.webp');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2025-12-20">2025-12-20</time>
+                      <h4 class="title usmall">
+                        <a href="https://mx.nna.lat/000016/">辟邪</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://mx.nna.lat/000015/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://mx.nna.lat/post-images/000015.webp');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2025-12-20">2025-12-20</time>
+                      <h4 class="title usmall">
+                        <a href="https://mx.nna.lat/000015/">义和团</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://mx.nna.lat/000014/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://mx.nna.lat/post-images/000014.webp');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2025-12-20">2025-12-20</time>
+                      <h4 class="title usmall">
+                        <a href="https://mx.nna.lat/000014/">我要验牌</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
+                  <h4 class="widget-title title white bordered">标签</h4>
+                  <div class="tagcloud">
+                    
+                      <a href="https://mx.nna.lat/llsLEc-O9T/" class="ctag ctag-0 ctag-llsLEc-O9T" aria-label="">词条</a>
+                    
+                  </div>
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
+                  <h4 class="widget-title title white bordered">关于bk百科</h4>
+                  <div class="avatar">
+                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://mx.nna.lat/images/avatar.png);"></span></a>
+                  </div>
+                  <div class="info">
+                    <h4 class="title small author-name gradient-effect no-margin"><a href="">毛线百科MX Wiki</a></h4>
+                    <p class="founder">欢迎来到毛线百科!毛线百科 MX-Wiki成立于2025 年， 热爱如星火，点聚而燎原</p>
+                    <div class="social">
+                      
+                          
+                            <a href="https://github.com/hellold9" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+                        
+                      
+                          
+                            <a href="https://x.com/huanhuan31556" class="translate-effect" target="_blank"><i class="fa fa-twitter"></i></a>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </div> 
+                  </div>
+                  <div class="clear"></div>
+                  </section>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="logo">
+          <a href="https://mx.nna.lat"><img src="\media\images\custom-footerLogo.png" alt=""></a>
+        </div>
+        <p class="published border-effect">
+          ©2025 共 24 个条目
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+<script>
+    new Valine({
+        el: '#comments',
+        appId: 'cgiiQsJurTiUaOW1T8UC5NdH-MdYXbMMI' ,
+        appKey: '4nJZkZkO6JkMtEV6F9rp0Vkl',
+        pageSize: 30,
+        placeholder: '既然来了，那就留个痕迹吧~',
+        visitor: false // 阅读量统计
+    })
+</script>
+    
+
+      
+    <script src="https://mx.nna.lat/media/js/functions-post.js"></script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>

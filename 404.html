@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 毛线百科网站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: radial-gradient(#e3e3e3 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        
+        .logo i {
+            font-size: 28px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav a {
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #1a73e8;
+        }
+        
+        .error-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 40px 0;
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: 800;
+            color: #1a73e8;
+            line-height: 1;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0 #e3e3e3;
+        }
+        
+        .error-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .error-description {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+        
+        .error-illustration {
+            margin: 30px 0;
+            position: relative;
+            height: 200px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .book-stack {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 150px;
+        }
+        
+        .book {
+            position: absolute;
+            width: 120px;
+            height: 150px;
+            background: #1a73e8;
+            border-radius: 4px 8px 8px 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .book:nth-child(1) {
+            background: #4285f4;
+            transform: translateX(-60px) rotate(-5deg);
+            z-index: 1;
+        }
+        
+        .book:nth-child(2) {
+            background: #34a853;
+            transform: translateX(0) rotate(2deg);
+            z-index: 2;
+        }
+        
+        .book:nth-child(3) {
+            background: #fbbc05;
+            transform: translateX(60px) rotate(5deg);
+            z-index: 3;
+        }
+        
+        .book-spine {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 15px;
+            height: 130px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .magnifying-glass {
+            position: absolute;
+            top: 20px;
+            right: 30%;
+            width: 60px;
+            height: 60px;
+            border: 8px solid #ea4335;
+            border-radius: 50%;
+            z-index: 10;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .magnifying-glass:after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            right: -15px;
+            width: 30px;
+            height: 8px;
+            background: #ea4335;
+            transform: rotate(45deg);
+            border-radius: 4px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0d62d9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f5f5f5;
+            border-color: #ccc;
+            transform: translateY(-2px);
+        }
+        
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 18px 25px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.15);
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-box button:hover {
+            background-color: #0d62d9;
+        }
+        
+        .popular-links {
+            margin-top: 50px;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .popular-links h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .link-card {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #333;
+            border-left: 4px solid #1a73e8;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            color: #1a73e8;
+        }
+        
+        .link-card i {
+            color: #1a73e8;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: #666;
+            border-top: 1px solid #eaeaea;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 80px;
+            }
+            
+            .error-title {
+                font-size: 26px;
+            }
+            
+            .error-description {
+                font-size: 16px;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .links-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .magnifying-glass {
+                right: 20%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 60px;
+            }
+            
+            .error-title {
+                font-size: 22px;
+            }
+            
+            .actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .magnifying-glass {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>毛线百科</span>
+            </a>
+            <nav class="nav">
+                <a href="/"><i class="fas fa-home"></i> 首页</a>
+                <a href="#"><i class="fas fa-compass"></i> 探索</a>
+                <a href="#"><i class="fas fa-history"></i> 历史</a>
+                <a href="#"><i class="fas fa-question-circle"></i> 帮助</a>
+            </nav>
+        </header>
+        
+        <main class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">知识页面未找到</h1>
+            <p class="error-description">
+                很抱歉，您要访问的页面不存在或已被移动。这可能是因为链接已更改、页面被删除，或者您输入了错误的地址。
+            </p>
+            
+            <div class="error-illustration">
+                <div class="magnifying-glass"></div>
+                <div class="book-stack">
+                    <div class="book">
+                        <div class="book-spine"></div>
+                    </div>
+                    <div class="book">
+                        <div class="book-spine"></div>
+                    </div>
+                    <div class="book">
+                        <div class="book-spine"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" placeholder="搜索百科内容..." id="searchInput">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="actions">
+                <a href="/" class="btn btn-primary"><i class="fas fa-home"></i> 返回首页</a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> 返回上一页</a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-compass"></i> 随机文章</a>
+                <a href="/hi" class="btn btn-secondary"><i class="fas fa-question-circle"></i> 联系支持</a>
+            </div>
+            
+            <div class="popular-links">
+                <h3>热门百科条目</h3>
+                <div class="links-grid">
+                    <a href="#" class="link-card">
+                        <i class="fas fa-globe-americas"></i>
+                        <div>世界历史</div>
+                    </a>
+                    <a href="#" class="link-card">
+                        <i class="fas fa-atom"></i>
+                        <div>量子物理</div>
+                    </a>
+                    <a href="#" class="link-card">
+                        <i class="fas fa-dna"></i>
+                        <div>基因科学</div>
+                    </a>
+                    <a href="#" class="link-card">
+                        <i class="fas fa-landmark"></i>
+                        <div>古代文明</div>
+                    </a>
+                    <a href="#" class="link-card">
+                        <i class="fas fa-leaf"></i>
+                        <div>环境保护</div>
+                    </a>
+                    <a href="#" class="link-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>人工智能</div>
+                    </a>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2023 毛线百科. 版权所有. 致力于提供准确、客观的知识信息.</p>
+            <p>遇到问题？<a href="/hi" style="color: #1a73e8; text-decoration: none;">联系我们</a></p>
+        </footer>
+    </div>
+    
+    <script>
+        // 模拟搜索功能
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm.trim()) {
+                alert(`正在搜索: ${searchTerm}\n(此功能在示例中为演示效果)`);
+                // 在实际应用中，这里应该执行搜索跳转
+                // window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
+            }
+        });
+        
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('searchBtn').click();
+            }
+        });
+        
+        // 返回上一页功能
+        document.querySelectorAll('.btn-secondary')[1].addEventListener('click', function(e) {
+            e.preventDefault();
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                alert('无法返回上一页，将跳转到首页');
+                window.location.href = '/';
+            }
+        });
+        
+        // 随机文章功能
+        document.querySelectorAll('.btn-secondary')[2].addEventListener('click', function(e) {
+            e.preventDefault();
+            const randomArticles = [
+                '量子力学基础',
+                '罗马帝国兴衰史',
+                '光合作用原理',
+                '人工智能发展简史',
+                '世界七大奇迹',
+                'DNA结构与功能'
+            ];
+            const randomArticle = randomArticles[Math.floor(Math.random() * randomArticles.length)];
+            alert(`随机推荐文章: ${randomArticle}\n(在实际应用中，这里将跳转到随机文章页面)`);
+        });
+        
+        // 添加一些交互效果
+        document.querySelectorAll('.link-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过编号查找条目</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            margin: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        
+        .number-input {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1.2em;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            outline: none;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        .number-input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .number-input::placeholder {
+            color: #bdc3c7;
+            letter-spacing: normal;
+        }
+        
+        .hint {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #95a5a6;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hint svg {
+            margin-right: 6px;
+        }
+        
+        .link-section {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            display: none;
+        }
+        
+        .link-section.visible {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .link-title {
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .generated-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 18px;
+            background-color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 500;
+            border: 1px solid #e1e8ed;
+            transition: all 0.2s ease;
+            word-break: break-all;
+            margin-top: 10px;
+        }
+        
+        .generated-link:hover {
+            background-color: #f0f7ff;
+            border-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.15);
+        }
+        
+        .link-icon {
+            margin-right: 8px;
+        }
+        
+        .examples {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .examples h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .example-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .example {
+            padding: 8px 16px;
+            background-color: #e8f4fc;
+            border-radius: 6px;
+            color: #2980b9;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .example:hover {
+            background-color: #d6eaf8;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+            }
+            
+            .number-input {
+                font-size: 1.1em;
+                padding: 14px;
+            }
+            
+            .example-list {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>通过编号查找条目</h1>
+        <p class="subtitle">输入6位数字编号，系统将生成对应的跳转链接</p>
+        
+        <div class="input-section">
+            <label for="numberInput" class="input-label">请输入6位数字编号：</label>
+            <input 
+                type="text" 
+                id="numberInput" 
+                class="number-input" 
+                placeholder="例如：000010"
+                maxlength="6"
+                inputmode="numeric"
+                pattern="\d*"
+            >
+            <div class="hint">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1ZM8 13.5C4.96243 13.5 2.5 11.0376 2.5 8C2.5 4.96243 4.96243 2.5 8 2.5C11.0376 2.5 13.5 4.96243 13.5 8C13.5 11.0376 11.0376 13.5 8 13.5Z" fill="#95a5a6"/>
+                    <path d="M7.25 5.25C7.25 4.83579 7.58579 4.5 8 4.5C8.41421 4.5 8.75 4.83579 8.75 5.25C8.75 5.66421 8.41421 6 8 6C7.58579 6 7.25 5.66421 7.25 5.25Z" fill="#95a5a6"/>
+                    <path d="M7.25 7.25C7.25 6.83579 7.58579 6.5 8 6.5C8.41421 6.5 8.75 6.83579 8.75 7.25V10.75C8.75 11.1642 8.41421 11.5 8 11.5C7.58579 11.5 7.25 11.1642 7.25 10.75V7.25Z" fill="#95a5a6"/>
+                </svg>
+                请输入6位数字（0-9），例如000010、123456
+            </div>
+        </div>
+        
+        <div id="linkSection" class="link-section">
+            <div class="link-title">生成的跳转链接：</div>
+            <a id="generatedLink" class="generated-link" href="#" target="_blank">
+                <svg class="link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span id="linkText">/000010</span>
+            </a>
+        </div>
+        
+        <div class="examples">
+            <h3>示例编号：</h3>
+            <div class="example-list">
+                <div class="example" data-number="000001">000001</div>
+                <div class="example" data-number="123456">123456</div>
+                <div class="example" data-number="654321">654321</div>
+                <div class="example" data-number="999999">999999</div>
+                <div class="example" data-number="000001">000001</div>
+                <div class="example" data-number="100000">100000</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>毛线百科 &copy; 2026</p>
+    </footer>
+
+    <script>
+        const numberInput = document.getElementById('numberInput');
+        const linkSection = document.getElementById('linkSection');
+        const generatedLink = document.getElementById('generatedLink');
+        const linkText = document.getElementById('linkText');
+        const examples = document.querySelectorAll('.example');
+        
+        // 处理输入变化
+        numberInput.addEventListener('input', function() {
+            // 只允许输入数字
+            this.value = this.value.replace(/\D/g, '');
+            
+            // 限制为6位数字
+            if (this.value.length > 6) {
+                this.value = this.value.substring(0, 6);
+            }
+            
+            // 如果输入了6位数字，显示跳转链接
+            if (this.value.length === 6) {
+                updateLink(this.value);
+            } else {
+                linkSection.classList.remove('visible');
+            }
+        });
+        
+        // 处理示例点击
+        examples.forEach(example => {
+            example.addEventListener('click', function() {
+                const number = this.getAttribute('data-number');
+                numberInput.value = number;
+                updateLink(number);
+            });
+        });
+        
+        // 更新链接函数
+        function updateLink(number) {
+            const link = `/${number}`;
+            linkText.textContent = link;
+            generatedLink.href = link;
+            linkSection.classList.add('visible');
+            
+            // 滚动到链接区域
+            linkSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // 页面加载时如果有示例参数，则自动填充
+        window.addEventListener('DOMContentLoaded', function() {
+            // 检查URL中是否有示例参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const exampleParam = urlParams.get('example');
+            
+            if (exampleParam && /^\d{6}$/.test(exampleParam)) {
+                numberInput.value = exampleParam;
+                updateLink(exampleParam);
+            }
+        });
+        
+        // 添加按键支持（按Enter键时聚焦到输入框）
+        document.addEventListener('keydown', function(event) {
+            // 如果不是在输入框中按下的，按Enter键聚焦到输入框
+            if (event.key === 'Enter' && event.target !== numberInput) {
+                numberInput.focus();
+                numberInput.select();
+            }
+        });
+    </script>
+</body>
+</html>
