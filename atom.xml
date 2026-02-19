@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://mx.315996.xyz</id>
+    <title>Gridea</title>
+    <updated>2026-02-19T12:18:44.347Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://mx.315996.xyz"/>
+    <link rel="self" href="https://mx.315996.xyz/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://mx.315996.xyz/images/avatar.png</logo>
+    <icon>https://mx.315996.xyz/favicon.ico</icon>
+    <rights>All rights reserved 2026, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[网站公告]]></title>
+        <id>https://mx.315996.xyz/post/nTTpaiquXt/</id>
+        <link href="https://mx.315996.xyz/post/nTTpaiquXt/">
+        </link>
+        <updated>2026-02-07T15:03:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>关于评论区暂时下线的通知</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>关于评论区暂时下线的通知</p>
+<!-- more -->
+<p>2026年1月12日，LeanCloud 停止对外提供服务，本站评论系统Valine是一款基于LeanCloud的快速、简洁的无记录评论系统。本站评论已备份，以后会将评论系统切换为Twikoo或Waline。</p>
+<p>尊敬的 LeanCloud 用户：</p>
+<p>感谢您一直以来对 LeanCloud 的信任与支持。自平台上线以来，我们陪伴并见证了无数开发者的成长与创新，能与大家共同走过这十余年，我们深感荣幸。</p>
+<p>为了团队能聚焦打造更优质的产品，经过慎重考虑，我们决定逐步停止 LeanCloud 的服务。</p>
+<p>为保障您的业务平稳过渡，我们制定了为期一年的后续服务及善后计划，具体安排如下：</p>
+<p>功能冻结<br>
+从2026 年 1 月 12 日起：</p>
+<p>停止新用户注册<br>
+停止创建新的应用（App）<br>
+现有存量应用在正式停止服务前，仍可继续正常使用。</p>
+<p>正式停止服务时间表<br>
+正式停止服务时间：自本公告发布之日起满一年，即2027 年 1 月 12 日。</p>
+<p>届时，平台将正式关闭所有面向公众的服务，包括应用访问、数据读写、API 调用、控制台使用等。</p>
+<p>提示<br>
+根据《个人信息保护法》及相关法律法规，服务停止后，我们将依法对平台内留存的所有用户数据进行永久性销毁或匿名化处理，数据一旦销毁将无法恢复。</p>
+<p>数据导出和迁移<br>
+为保障您的数据安全和业务的平稳过渡，我们准备了数据导出和迁移指引。请您根据业务需求，提前规划并尽早启动数据的导出和迁移工作。</p>
+<p>余额退款<br>
+如果账户中还有余额，您在迁移完毕后，可自助申请退款。请参考退款指引。</p>
+<p>致谢<br>
+LeanCloud 的每一次成长，都离不开您的信任、选择与陪伴。过去十余年中，感谢每一位开发者与企业用户的使用、反馈与共创。</p>
+<p>如您在迁移中有任何疑问，欢迎随时联系我们。</p>
+<p>再次诚挚感谢您的理解与支持！</p>
+<p>LeanCloud 团队</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LaunchNext]]></title>
+        <id>https://mx.315996.xyz/post/2u8mrEiID7/</id>
+        <link href="https://mx.315996.xyz/post/2u8mrEiID7/">
+        </link>
+        <updated>2026-01-02T09:28:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>文/One</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>文/One</p>
+<!-- more -->
+<p>Explore LaunchNext, an open source macOS app launcher that brings back desktop customization. Learn about its SwiftUI architecture, clever SQLite data migration, performance optimizations, and how it represents the power of open source innovation in solving real user problems.</p>
+<h1 id="launchnextmacos-26-开源启动器">LaunchNext：macOS 26 开源启动器</h1>
+<p>&gt; 重拾桌面自定义的经典体验</p>
+<hr>
+<h2 id="项目简介">项目简介</h2>
+<p>几天前，苹果又推送了 macOS 26 更新。说实话，我其实并不想升级——担心电脑会变慢。但转念一想，迟早都要升级，拖着也不是办法，于是点了更新。</p>
+<p>升级后的第一件事就是找应用，结果我完全迷失了：我的应用都去哪儿了？新版 Launchpad 的界面用起来非常别扭，完全不是我熟悉的工作流。</p>
+<p>无奈之下，我去 GitHub 碰碰运气，看看有没有替代方案。结果真的让我找到了一个宝藏项目：<a href="https://github.com/ggkevinnnn">@ggkevinnnn</a> 开发的 <a href="https://github.com/ggkevinnnn/LaunchNow">LaunchNow</a>。</p>
+<p>用了一段时间后，我发现这款软件的基础非常扎实。所有核心功能都做得很好：应用布局、文件夹管理、搜索、键盘导航——作者显然是用心在解决问题。但随着使用深入，我觉得还是缺少不少功能，有些地方还可以优化。我再也等不及了，决定亲自下场修改。</p>
+<p>当苹果自己的设计选择迫使用户寻找第三方替代品时，这已经足够不便了。用户不应该为了让自己桌面正常工作而经历额外的折腾。于是，<strong>LaunchNext</strong> 诞生了——一个免费且开源的 macOS 26 Launchpad。</p>
+<p>项目地址：<a href="https://github.com/RoversX/LaunchNext">https://github.com/RoversX/LaunchNext</a></p>
+<hr>
+<h2 id="截图展示">截图展示</h2>
+<p>（文中展示了 LaunchNext 的实际运行截图）</p>
+<hr>
+<h2 id="launchnext-的核心功能">LaunchNext 的核心功能</h2>
+<p>✅ <strong>一键导入系统 Launchpad</strong><br>
+直接读取原生 Launchpad SQLite 数据库（<code>/private$(getconf DARWIN_USER_DIR)com.apple.dock.launchpad/db/db</code>），完美复刻你现有的文件夹、应用位置和布局。</p>
+<p>✅ <strong>经典 Launchpad 体验</strong><br>
+操作方式与你记忆中的原版界面完全一致。</p>
+<p>✅ <strong>多语言支持</strong><br>
+完整国际化，支持英文、中文、日文、法文、西班牙文、德文、俄文等。</p>
+<p>✅ <strong>隐藏图标标签</strong><br>
+不需要应用名称时，可启用简洁的极简视图。</p>
+<p>✅ <strong>自定义图标尺寸</strong><br>
+可根据个人喜好调整图标大小。</p>
+<p>✅ <strong>智能文件夹管理</strong><br>
+像过去一样创建和整理文件夹。</p>
+<p>✅ <strong>即时搜索与键盘导航</strong><br>
+无需鼠标点击，快速找到应用。</p>
+<hr>
+<h2 id="安装与设置">安装与设置</h2>
+<p>LaunchNow 采用 GPL 3 许可证，LaunchNext 遵循相同条款，以保持兼容性并尊重原项目的开源精神。</p>
+<h3 id="下载与安装">下载与安装</h3>
+<ol>
+<li>从 <a href="https://github.com/RoversX/LaunchNext">GitHub</a> 下载最新版本</li>
+<li>将 LaunchNext.app 拖入「应用程序」文件夹</li>
+<li>启动应用即可</li>
+</ol>
+<h3 id="安全提示">安全提示</h3>
+<p>⚠️ 若 macOS 阻止运行，请在终端执行：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sudo xattr -r -d com.apple.quarantine /Applications/LaunchNext.app</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>原因说明：</strong><br>
+作者无力承担苹果开发者证书年费（$99/年），因此 macOS 默认会阻止未签名应用。此命令用于移除隔离标志，仅对你信任的应用执行。</p>
+<hr>
+<h2 id="国际化支持">国际化支持</h2>
+<p>LaunchNext 支持多种语言，且列表持续扩充：</p>
+<ul>
+<li>🇺🇸 English</li>
+<li>🇨🇳 中文 (Chinese)</li>
+<li>🇯🇵 日本語 (Japanese)</li>
+<li>🇰🇷 한국어 (Korean)</li>
+<li>🇫🇷 Français (French)</li>
+<li>🇪🇸 Español (Spanish)</li>
+<li>🇩🇪 Deutsch (German)</li>
+<li>🇷🇺 Русский (Russian)</li>
+<li>🇮🇳 हिन्दी (Hindi)</li>
+<li>🇻🇳 Tiếng Việt (Vietnamese)</li>
+</ul>
+<p>&gt; 更多语言正根据社区需求持续添加中。</p>
+<p>应用会自动检测系统语言并切换对应界面，所有 UI 元素、菜单与提示均已完整本地化。</p>
+<hr>
+<h2 id="致谢">致谢</h2>
+<p>衷心感谢开源社区在过去几天给予的帮助：代码审查、Bug 反馈、功能建议与精神支持——反响之热烈令人惊叹。</p>
+<p>特别感谢：</p>
+<ul>
+<li><a href="https://github.com/ggkevinnnn">@ggkevinnnn</a> 创造了出色的 LaunchNow——软件优秀，作者更是友善热心，总是乐于助人</li>
+<li>所有测试早期版本并提供反馈的朋友</li>
+<li>协助翻译与文档的贡献者</li>
+<li>更广泛的 macOS 开发者社区，分享知识与资源</li>
+</ul>
+<p>没有开源的协作精神，就不会有这个项目。当我们自由分享成果时，所能共同构建的一切令人振奋。</p>
+<p><strong>声明：</strong><br>
+LaunchNext 是作者的个人开源项目，独立于其他项目或实体运作。这是一项完全由社区驱动的努力，旨在改善 macOS 应用启动体验。源码与贡献入口：<a href="https://github.com/RoversX/LaunchNext">github.com/RoversX/LaunchNext</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[辟邪]]></title>
+        <id>https://mx.315996.xyz/post/000016/</id>
+        <link href="https://mx.315996.xyz/post/000016/">
+        </link>
+        <updated>2025-12-20T15:32:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>MX-kno000016</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MX-kno000016</p>
+<!-- more -->
+<p>辟（bì）邪，是一只貔貅，天禄的哥哥，性格比较暴躁，无条件护着天禄，现与天禄团聚。</p>
+<h2 id="角色介绍">角色介绍</h2>
+<p>辟邪是一只毛绒绒的貔貅，在亘古时代出生于一枚双黄蛋中，是貔貅兄弟里的哥哥，弟弟叫天禄。</p>
+<p>时过境迁，沧海桑田，千万年的时间过去，辟邪在现代社会苏醒在天禄的肚子里，他并不知道在他沉睡的千年里发生了什么，只知道自己有一个目的，那就是和天禄永远在一起。</p>
+<p>角色外貌<br>
+通体白色，头顶有两根的金色尖角，角的颜色貌似比天禄的深一点，耳朵尖上有红色的斑点，左耳有缺口。眉毛红色，呈云朵形状；与天禄绿色渐变为金色（以绿色为主）的眼睛不同，辟邪的眼睛是金色渐变为绿色（以金色为主）。</p>
+<p>辟邪的前爪上各有两条红色花纹，在他臀部两侧各有一个红色的四瓣梅花花纹。尾巴红色，质感柔软。</p>
+<p>作为一只貔貅，辟邪也是没有肛门的神兽。只进不出，只吃不拉。真·有口无肛门腔肠动物×2<br>
+角色生平</p>
+<h2 id="在三古篇中">在三古篇中</h2>
+<h3 id="上古篇">上古篇</h3>
+<p>混沌初分，鸿蒙始判，天地未开之际，辟邪与天禄先后从同一颗蛋中诞生。[1]</p>
+<p>辟邪先从蛋中破壳而出，随后天禄也破壳而出，他们刚一出生就看到四周全部都是苍天老登失败的造物，苍天也告诉他们世间很是危险，于是辟邪很是自信的表示自己是哥哥，哥哥会保护弟弟的。</p>
+<p>~~ 天禄：什么哥哥，不过就早出壳几秒钟而已。~~</p>
+<p>刚出壳的时候在蛋壳上有两段语音，天禄选择了下边14秒的语音，苍天告诉他是一只貔貅，天禄是他的名字。辟邪选择了上边17秒的语音，苍天告诉他是一只貔貅，辟邪是他的名字，紧接着开始自毁倒计时，蛋壳爆炸。貔貅兄弟有了自己的名字，同时背负起了属于自己的不同命运。（苍天老登的恶趣味）</p>
+<p>辟邪原本和天禄一样以金玉为食，常把大块金玉让给天禄，刚出生时的山头全部都是金玉，后因金玉几乎被吃光，辟邪向外边陌生的世界探索，在寻找金玉途中发现恶灵也能充饥，于是改食恶灵。</p>
+<p>因金玉被吃光，貔貅兄弟转到新的山头，天禄负责看家，辟邪外出寻找食物。当回家的时候猛然发现天禄结识了新朋友帝江，起初辟邪将她当做怪物，在帝江给天禄金玉示好并经过辟邪检查无害后把她留了下来。</p>
+<p>帝江常带着貔貅兄弟外出晒太阳，并聆听凤皇的歌声，天禄给帝江唱歌，并让辟邪也唱歌，结果辟邪唱的歌很烂，让帝江饱受摧残，独自外出散步，遇到了混沌。</p>
+<p>把混沌拐回家后，辟邪很快就接纳了混沌，四兽家庭组成。混沌打出一个爪爪山洞，四只神兽一起度过了漫长的光阴。</p>
+<p>因后羿射日，九乌陨落，帝江放走了最后一只三足金乌，从而死亡，而混沌也为了帝江试图追回金乌，消失不见。</p>
+<p>貔貅兄弟开始了漫长的等待，向往常一样他们睡在帝江的怀里。长睡不醒，一等经年。</p>
+<h3 id="中古篇">中古篇</h3>
+<p>貔貅兄弟一睡就是几百年，天禄首先从土里爬出来，他们都长大了一些。辟邪捡到一颗种子，将其种在帝江死亡的地方，方便日后回来寻找。</p>
+<p>与此同时，人类出现了，辟邪为了避免危险带着天禄前往山林。天禄因抓到大恶灵让辟邪感到一丝丝失落，但随即天禄就中了陷阱，辟邪傲娇心爆棚，觉得天禄需要自己来保护。</p>
+<p>为寻找食物貔貅兄弟需要跨越一条山沟，天禄因爪滑掉进山沟，辟邪在爬下山沟时也不慎坠落，被一只麒麟救起。</p>
+<p>得知麒麟名叫四不相，为了救自己的弟弟，辟邪带着四不相到处寻找，却一无所获，崩溃哭泣。</p>
+<p>最终四不相带辟邪回到麒麟山时遇到了被四不相父母拐回家的天禄，貔貅兄弟重聚。</p>
+<p>在和四不相经历了北海抓鱼、枫树林大战、沙漠遇险等许多事之后，辟邪逐渐认可了四不相，将他视为自己的兄弟。</p>
+<p>在回到帝江死亡的地方时，遇到了三小只和混沌，貔貅兄弟和混沌试图将帝江挖出，却只挖出许多光芒，混沌彻底发疯，化作彩云山脉。</p>
+<p>貔貅兄弟因此和三小只开战，辟邪为保护四不相被饕餮咬掉一小块左耳，发怒变大身体打败三小只。从此和天禄在此处生活，不愿离开。</p>
+<h3 id="近古篇">近古篇</h3>
+<p>貔貅兄弟迟迟不愿离开，饿倒在山中，依靠四不相采摘野果存活。当他们醒来的时候发现面前有一大堆金银玉石，从四不相口中得知是一个小金人留下的。</p>
+<p>辟邪为了让天禄吃到更多的食物，每次都假装吃掉金球球，再趁着天禄不注意将金球球吐回去，长此以往便饿倒了。</p>
+<p>辟邪饿的口吐紫液，爪垫发紫，浑身没有力气，天禄为清掉辟邪体内的恶灵吃掉了剩余所有的食物，迫不得已四不相带着他们回到了麒麟山，让辟邪在麒麟山休息。</p>
+<h2 id="在现代篇中">在现代篇中</h2>
+<p>在漫画开头天禄逃离人类追捕、逃往鹿人店的过程中，在天禄肚子里的辟邪苏醒了。[2]</p>
+<p>辟邪最初住在天禄的肚子里，并在那里养了很多鸡，也养过螃蟹但因喂食五仁月饼而死亡。[3]辟邪会在天禄睡觉时出来倒垃圾、[4][5]吃月饼、[6]剪毛[7]以及捕猎。[8]</p>
+<p>辟邪在第500话因得知天禄被天庭陷害后不记得自己而暴怒，经四不像劝说后开始与失忆的天禄交朋友，[9]并试图让天禄找回记忆。[10]起初他们约定在山中深处见面，[11]但有时见面地点也会是鹿人店附近的山坡上。[12]在天禄认定自己是哥哥后，[13]天禄为辟邪准备了一个山洞作为他们貔貅兄弟的巢穴，[14]并在那里居住了一段时间。[15]</p>
+<p>在几次尝试唤起天禄的记忆失败后，[16][17]辟邪决定先去寻找他们兄弟的老朋友麒麟四不相，并威胁金角银角兄弟帮忙寻找并因此触发了第800话的主线剧情。[18]因道具搜寻无果（死了当然找不到），辟邪决定独自外出寻找四不相。[19]</p>
+<p>辟邪在水剧情时长进行关于四不相画像的艺术创作的过程中遇到了花椒，[20]进而成为了知音。</p>
+<p>因画笔不太行，辟邪抓住了不长眼睛的诸犍，将它当做新画笔。</p>
+<p>在一个下雨天，辟邪暂住的洞里被翔太、牧桑闯入，经花椒劝说辟邪才放弃吃掉他们。</p>
+<p>又是一个下雨天，花椒在雨停外出时捡到一条蛇，并带回洞里，却被反咬一口，辟邪将其捋直，作为新的画笔。</p>
+<p>雨停之后，辟邪决定外出寻找四不相，他放走了翔太和牧桑，并送给包括花椒在内的他们各自一份礼物。在经过一片荆棘林时被藤蔓缠住，好不容易脱身之后他似乎听到了天禄的呼喊声，却只当作幻听，仍旧想要去寻找四不相。</p>
+<p>不曾想底下的土地发出金光，化成混沌的样子，载着辟邪飞向空中，与同样被帝江载着的天禄团聚，一家子在千年以后终于再次重逢。</p>
+<p>面对辟邪的询问，天禄选择隐瞒四不相的事情。此后他们就在在彩云山脉生活，却意外遇到了被米糖捡到的七十七，同族的气息让他们放下警惕，但七十七一系列怪异行为却又让天禄怀疑他是天庭派下来的。</p>
+<h2 id="在困兽岛中">在困兽岛中</h2>
+<p>辟邪是天禄的营救对象，根据兔托尼的描述和监狱长是四不像等细节，大致能推测出困兽岛主要是关押辟邪的，且困兽岛本身是天禄的心锁世界（只是猜测）。</p>
+<h2 id="在心锁事件中">在心锁事件中</h2>
+<p>漫画中仅提及到一点点。大概的内容是这些：辟邪因为不知道的原因发了疯，甚至攻击了天禄。此时两只兽正被天庭追杀，天禄无奈只好吞掉了辟邪，但是依然被天庭捉到了，可是由于天道护之，天尊不敢杀害天禄，于是盯上了先前被天禄救过，现在想赶来报恩的一只小鹿，他将麒麟四不相的骨血强植入其体内，并为其制作了麒麟面具。这只小鹿——也就是后来的四不像——便被迫成为了封印天禄记忆的“貔貅心锁”。</p>
+<h2 id="角色原型">角色原型</h2>
+<blockquote>
+<p>“	貔貅，形似虎，或曰似熊，毛色灰白，辽东人谓之白熊。雄者曰貔，雌者曰貅，故，古人多连举之。	”<br>
+——【民国】徐珂《清稗类钞·动物·貔貅》</p>
+</blockquote>
+<blockquote>
+<p>“	乌戈地暑热莽平……而有桃拔、师子、犀牛。<br>
+桃拔一名符拔，似鹿，长尾，一角者或为天鹿(好似打错了 禄)，两角者或为辟邪。	”<br>
+——【东汉】班固《汉书·西域传上·乌戈山离国》</p>
+</blockquote>
+<p>此为孟康注解，而在漫画中，辟邪有两只角，天禄有一只角，即是与之对应。<br>
+角色解析<br>
+辟邪对故事主线产生了关键性的影响，漫画开头只要是出现了辟邪的红爪就都是跟主线相关。（行走的大刀子）</p>
+<p>辟邪是天禄的哥哥，虽然他只比天禄早出生几秒钟，却比谁都深爱着天禄。为了天禄他甘愿做一切事情，什么东西都想着天禄，是一个资深的高冷傲娇弟控。</p>
+<p>辟邪对陌生兽极其警惕，但对自己亲近的兽有强烈的保护欲。正因为如此差别很大的性格，造成了让读者认为辟邪双标的感觉，辟邪性格暴躁，但只对伤害到自己亲近兽的其它兽，虽然如此，也给读者带来了不小的反差感。</p>
+<p>但读者能记住辟邪做的许多事，能记住他的性格，这恰恰说明辟邪这个角色的塑造是成功的，从而让辟邪这个角色的热度一直居高不下。</p>
+<h2 id="角色轶事">角色轶事</h2>
+<p>由于辟邪对主线剧情影响十分巨大，在第100话辟邪登场之前有很多的地方已经暗示了他的存在：<br>
+第2话及第10话出现的雕像。<br>
+第12话，八斤询问天禄他哥哥的去向。<br>
+第16话天禄狗窝的照片（疑似）。<br>
+第36话，饕餮对天禄提到了“兄弟”。<br>
+第38话的“食物”列表页面的神秘黑影，暗示辟邪在天禄的肚子里。<br>
+第84话“国王游戏”中，很多角色提到了天禄的哥哥。<br>
+第97话，天禄肚子里的金币堆中藏着辟邪的两角。<br>
+官方档案发布时给辟邪批注的诗[21]为：<br>
+“	生别展转不相见，胡尘暗天道路长。	”<br>
+——【唐】杜甫《乾元中寓居同谷县作歌七首》<br>
+与啥都爱吃的天禄不一样的是，辟邪主要吃恶灵和不义之财，有时也会吃天禄给的其他东西（在上古期成长的时候也吃过鲲，并且拿四不相的美貌作鱼饵）。<br>
+在辟邪的肚子里有一种神奇的现象，白茫茫的空间一尘不染，地表有一层特别的液体，所有沾上它的包括灰尘在内的一切事物都会消失不见，甚至对话框都褪色了，只有貔貅可以正常接触。这种现象不仅在辟邪的肚子里，耳朵里也有类似的现象。这说明辟邪的身体有着极强的自清洁能力，具体原因暂时无从得知。[22]<br>
+他是个资深的弟控，曾因为四不相舔了天禄而吃醋。[23]<br>
+天生是个五音不全的音痴，唱歌跑调严重的让帝江很是难受，[24]还瞎敲定音鼓协奏曲让天禄失眠。[25]<br>
+现代篇、困兽岛篇与心锁事件时的辟邪左耳都缺了一块。<br>
+此系在一次与桃桃的打斗中被对方咬下的。[26]<br>
+辟邪性格高冷傲娇，[27]且易怒，因此时常一副面瘫脸。<br>
+辟邪的战力和天禄相差不多，但是在生气的时候，辟邪要更厉害一些，但是也会失去理智。[28]<br>
+辟邪因为面瘫导致演技远不如天禄，但他主业其实是养殖大户，有自己的小农场。<br>
+经常温柔地骗小鸡进厨房做成小鸡炖蘑菇。[29]<br>
+会经常跳出天禄的肚子去扔垃圾，被四不像、兔爷、吐宝鼠、核桃等兽看到过。<br>
+辟邪虚弱时胃部消化恶灵的能力会减弱，并且因为吞噬恶灵太多，肉垫会变紫。[30]<br>
+辟邪的方向感貌似跟他的脾气一样不是特别好，睡觉的时候会“打着转儿地”踹天禄的屁股。[31]<br>
+为寻找四不相而练习画作，被花椒当成上古遗迹（上古神兽画的就是上古遗迹），进而成为知音。<br>
+辟邪曾客串于《非人哉》动画第二季第31集4分25秒处，金拽根拿着辟邪趴着睡觉样子的貔貅金雕塑，甚至辟邪还在流口水。<br>
+辟邪客串于《非人哉》动画。<br>
+辟邪客串于《非人哉》动画。<br>
+辟邪还曾客串于《薛定谔之羊》的第45话，是有兽大乐园的标志性角色之一。</p>
+<p>最后呢就是说这个词条从有售档案馆youshou.wiki 抄过来的，也不会及时更新，让后没了<br>
+是借鉴🤣</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[义和团]]></title>
+        <id>https://mx.315996.xyz/post/000015/</id>
+        <link href="https://mx.315996.xyz/post/000015/">
+        </link>
+        <updated>2025-12-20T15:20:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>MX-kno000015</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MX-kno000015</p>
+<!-- more -->
+<p>义和团运动（The Boxer Rebellion），是指19世纪末中国发生的一场以“扶清灭洋”为口号的农民运动，又称义和团事件、庚子事变、庚子拳乱等。这一运动粉碎了帝国主义列强瓜分中国的狂妄计划，沉重打击了清政府的反动统治，加速了它的灭亡。<br>
+最初义和团同当时清朝大部分秘密团体一样，反对满族统治，以“反清复明”为口号，遭到镇压。随着中国近代形势的发展，以帝国主义侵略为先导的西方势力的冲突代替华夷之辩、满汉之争成为主要历史矛盾，义和团开始支持清朝抵抗西方，改名为“虎神营”，口号也改为“扶清灭洋” （1898年由赵三多首次提出）。<br>
+西方列强划分在华势力范围、华北频繁发生教案、天灾频发及宫廷权力争斗激化的情况下，1900年春季直隶，成千上万习练义和拳并号称“义和团”的农民纵火烧毁了教堂和教徒房屋，同年6月，慈禧太后允许义和团进驻北京，义和团又先于清军进攻天津租界。<br>
+1900年8月14日，八国联军近2万人攻陷北京，慈禧太后携光绪皇帝狼狈西逃。在逃跑途中，慈禧下令绞杀义和团，并无耻地请求八国联军助剿。义和团在中外反动势力的镇压下失败。<br>
+义和团运动虽然失败了，但它沉重打击了帝国主义瓜分中国的野心。<br>
+1901年，清政府被迫同八国及比利时、荷兰、西班牙等11国签订了丧权辱国的《辛丑条约》。<br>
+<img src="https://mx.315996.xyz/post-images/1766244271399.jpg" alt="" loading="lazy"><br>
+<img src="https://mx.315996.xyz/post-images/1766244296246.jpg" alt="" loading="lazy"><br>
+<img src="https://mx.315996.xyz/post-images/1766244310737.jpg" alt="" loading="lazy"><br>
+<img src="https://mx.315996.xyz/post-images/1766244329637.jpg" alt="" loading="lazy"><br>
+<img src="https://mx.315996.xyz/post-images/1766244339999.jpg" alt="" loading="lazy"><br>
+<img src="https://mx.315996.xyz/post-images/1766244371587.jpg" alt="" loading="lazy"></p>
+<h2 id="何为申请加入义和团">何为“申请加入义和团”</h2>
+<p>“申请加入义和团”是近期学生们在网络上流行的一种幽默玩梗方式，它源于一首关于义和团运动的歌曲爆火，学生们借此调侃自己英语成绩不佳，想“灭洋”（避开英语学习）的心情，是一种自嘲和情绪宣泄，并非真正的历史认知或政治立场表达。</p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=869933509&bvid=BV1RV4y117BZ&cid=27432126429&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115308765453749&bvid=BV1pBH3zkEmE&cid=32809551051&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115705479500449&bvid=BV1PdmEByEBS&cid=34687355488&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+义和团小曲出自上映于1963-05-06(英国) / 1963-05-29(美国)的电影《北京55日》原名《55 Days at Peking》，导演为尼古拉斯·雷。
+而义和团小曲的汉化版是由YouTube（油管）博主The Victorian Chinese制作
+![](https://mx.315996.xyz/post-images/1766244394275.jpg)
+<p><img src="https://mx.315996.xyz/post-images/1766244405480.jpg" alt="" loading="lazy"><br>
+原视频简介如下</p>
+<p><img src="https://mx.315996.xyz/post-images/1766244413615.jpg" alt="" loading="lazy"><br>
+This song is uploaded for historical education and cultural understanding; it is not for any modern political purposes. All words should be viewed within context of its time.<br>
+此上傳目的僅為歷史教育與文化交流；並無現代政治目的。歌詞純屬當時歷史環境所有。<br>
+lyrics written collaboratively by Some Dude and The Victorian Chinese; sung by The Victorian Chinese.<br>
+天無雨，地焦旱,<br>
+鬼子眼珠皆發藍<br>
+神仙發愁，一同下山把道傳。</p>
+<p>非是邪、非白蓮，口念咒語法真言。<br>
+升黃表、敬香煙，請來各洞諸神仙。</p>
+<p>弟子同心苦用功，遍地草木化成兵；憑仙人之藝，定滅洋人一掃平。</p>
+<p>慈禧太后發令，義和團向前進，<br>
+要把洋鬼子全都趕出北京！</p>
+<p>兵法藝、都學全，平定鬼子不費難。<br>
+大法國、心膽寒，英美德俄盡消然。</p>
+<p>拆鐵道、拔線杆，快毀壞火輪船。<br>
+洋鬼子、盡除完，大清一統江山。<br>
+最可恨那毒蛇猛兽，吃尽我们血肉。<br>
+热血已沸腾,<br>
+五十五天在北京。<br>
+扶清滅洋，五十五天在北京。</p>
+<p>翻译：这首歌是为了历史教育和文化理解而上传的，它不涉及任何现代政治目的。所有歌词都应放在其时代背景下理解。歌词由Some Dude和The Victorian Chinese共同创作；由The Victorian Chinese演唱。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我要验牌]]></title>
+        <id>https://mx.315996.xyz/post/000014/</id>
+        <link href="https://mx.315996.xyz/post/000014/">
+        </link>
+        <updated>2025-12-20T15:14:38.000Z</updated>
+        <summary type="html"><![CDATA[<p>MX-kno000014</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MX-kno000014</p>
+<!-- more -->
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115496435452978&bvid=BV1kU1sBdEDy&cid=33722404642&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+我要验牌（音译：我腰烟牌）该台词出自周星驰1990年主演的香港电影《赌侠II之上海滩赌圣》。
+<iframe src="https://tyyszywvod5.com/videos/202503/15/67d573b0b25ae511540cbe7c/92g1a7/index.m3u8" width="100%" height="400" frameborder="0"></iframe>
+片中法国赌神角色用蹩脚中文说出“我要验牌”等台词，因夸张的口音和喜剧效果成为经典片段。法国赌神名为皮尔·卡诺（Pierre Cashon，亦有译作皮炎克松）。在对赌时，法国赌神说出“给我擦皮鞋”“我要验牌”“牌没有问题”“开牌啊”“小儿科”“小瘪三，不用看了”等台词。
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115747456031402&bvid=BV1b6BwB7ELA&cid=34850213675&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<p>网友们对此进行了各种整活玩梗。</p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115537321461067&bvid=BV17VCJBtEtz&cid=33953221376&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115461136057729&bvid=BV18VybBGEvv&cid=33518456448&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+在《上海滩赌圣》的最终赌局中，法国赌神与周星祖（周星驰饰）进行对决。尽管法国赌神拥有特异功能且一度占据上风，但周星祖利用“今晚打老虎”这一心理暗示以及剧情安排的运气，最终在赌桌上击败了他，使其计划落空。
+生活这桌赌局，总有人偷偷换牌、暗地使诈，但《上海滩赌圣》教我们的不是靠运气赢，而是哪怕手里牌烂，也要有不肯低头的较真，就是普通人最硬的底牌。]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[唐永平]]></title>
+        <id>https://mx.315996.xyz/post/000013/</id>
+        <link href="https://mx.315996.xyz/post/000013/">
+        </link>
+        <updated>2025-12-20T15:05:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>MX-kno000013</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MX-kno000013</p>
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[卞国泉]]></title>
+        <id>https://mx.315996.xyz/post/000012/</id>
+        <link href="https://mx.315996.xyz/post/000012/">
+        </link>
+        <updated>2025-12-19T16:30:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>MX-kno000012</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MX-kno000012</p>
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[孙莉]]></title>
+        <id>https://mx.315996.xyz/post/000011/</id>
+        <link href="https://mx.315996.xyz/post/000011/">
+        </link>
+        <updated>2025-12-19T16:29:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>MX-kno000011</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MX-kno000011</p>
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[刘智辰]]></title>
+        <id>https://mx.315996.xyz/post/000010/</id>
+        <link href="https://mx.315996.xyz/post/000010/">
+        </link>
+        <updated>2025-12-19T15:58:40.000Z</updated>
+        <summary type="html"><![CDATA[<p>MX-kno000010</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>MX-kno000010</p>
+<!-- more -->
+<p>刘智辰<br>
+<img src="https://mx.315996.xyz/post-images/1766243047487.png" alt="" loading="lazy"></p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>届别</th>
+<th>班级</th>
+<th>母亲</th>
+<th>父亲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>刘智辰</td>
+<td>2024届</td>
+<td>24届社团班、18班</td>
+<td>许燕</td>
+<td>刘卿</td>
+</tr>
+</tbody>
+</table>
+<p>刘智辰，2012年出生于江苏泰州兴化市，母亲许燕，父亲刘卿，宠物蔡司（没错，就是那个镜片品牌）。2024年加入社团班。其性格过于活泼，没有边界感，经常未经过他人允许就擅自动他人物品，甚至或将他人物品损坏。<br>
+##人物生平<br>
+刘智辰，2012年生，独生子女。母亲许燕，父亲刘卿，刘智辰是(liu zhi chen)一个寓意聪慧、格局开阔、音形义俱佳的好名字。<br>
+2024年加入社团班。他能与大家相处，具备基本的社交能力，但难免闹矛盾，能反复吵、反复和，本身就是一种韧性，说明这段关系里既有弹性，又有底线。</p>
+<h2 id="情商低的表现">情商低的表现</h2>
+<p>刘智辰是走班公认的低情商，他在与人交流中，常常会表现出一些让人感到不舒服、尴尬甚至冒犯的行为。</p>
+<h2 id="刘智辰的作文">刘智辰的作文</h2>
+<p>编者收集了两篇刘智辰的作文概括，如下</p>
+<p>1、餐桌上的谈话<br>
+刘在与父母吃饭时主动发起谈话，父母问刘，刘答：前日本与众人吃饭，“然后他们呼的一下子移到了另一张桌子上”（刘原文）并说：“今天你一个人坐吧。”（刘原文），就是被孤立，翌日，仍被孤立，母亲说她也有此事，建议刘绝交，这样的友谊不是真友谊。但刘未想过自身原因。</p>
+<p>2、感动的一事<br>
+冬天回老家山东，父级驾驶汽车行300千米。吃老掉的舅舅请吃饭。父弃刘与众儿于车中，刘说：无钥匙可开车？父答：No！，刘一心想开车，拉了手闸，正是坡路，冬路滑，后方为车如流水马如龙的街道。刘笑嘻嘻，众儿哭唧唧。父赶之，阻止，后怕。正可谓好奇心害死猫。最终刘认为自己小但只字未提自己调皮。</p>
+<h2 id="刘智辰的梗">刘智辰的梗</h2>
+<p>1、耶律阿保机<br>
+耶律阿保机（872年-926年9月6日）本是辽朝开国皇帝。但当刘智辰读耶律阿保机时，将音调读成了11167（CCCAB)，即哆、哆、哆、拉、西。很是魔性洗脑。<br>
+2、喵了个吧唧的<br>
+这句话的意思原是兴化方言“妈了个巴子的”因谐音似“喵了个吧唧的”，且“喵了个吧唧的”无骂人之意。<br>
+3、劳沙子把泥<br>
+这句话的意思原是“老傻子把你”因谐音似“劳沙子把泥”且“劳沙子把泥”无骂人之意。</p>
+<h2 id="口水事件">口水事件</h2>
+<p>刘智辰经常喜欢玩自己的口水。曾有一次被王子铭举报，便坐到了教室旁边。随后王子铭又将揽佬SKAIISYOURGOD的《八方来财》进行改编，改编歌词为“我们这的智辰仔/脖上喜欢挂口水/口水纸课桌上摆/座位才能靠旁边”。随后，在王子铭不经意间，刘智辰拿着王子铭写的歌词，向邓老师举报，于是王子铭也坐到了教室旁边。</p>
+<h2 id="东北雨姐事件">东北雨姐事件</h2>
+<p>由于走班同学<a href="/000002">卞羽曦</a>名字中有“羽”字，“羽”谐音“雨”。而且在地理上学习了东北地区，以及英语学习了雨季，因此，每当提起上述知识点时，刘智辰总是盯着卞羽曦看。并且还经常对她唱《大东北是我的家乡》“大东北是我的家乡/唢呐吹出了美美的模样/哥们儿相聚必须整二两/醉了月亮暖了我心肠”。对此刘卿表示，以后再唱此歌，必将对刘智辰进行体罚。</p>
+<h2 id="罚站也疯狂">罚站也疯狂</h2>
+<p>被老师“请”到了教室的后排罚站。通常，被罚站的同学会显得有些沮丧、羞愧，或者至少是规规矩矩地站着。但刘智辰（这颗魔丸）不一样啊，反而还能跳舞、做滑稽动作（像个乐子一样），不过这倒说明他拥有非常乐观开朗的心态。当然他的行为可能会分散其他同学的注意力，影响课堂的正常进行。<br>
+这种现象从七年级入学开始，一直持续到现在。<br>
+例如2025年12月，在某次德法课上，刘智辰被<a href="/000013">唐老师</a>“请”到了后面，随后便在后面跳起了舞。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Note 17. 性能加速]]></title>
+        <id>https://mx.315996.xyz/post/pai2fiCnOi/</id>
+        <link href="https://mx.315996.xyz/post/pai2fiCnOi/">
+        </link>
+        <updated>2025-12-16T09:11:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>文/Prorise</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>文/Prorise</p>
+<!-- more -->
+<h1 id="note-17-性能加速spring-cache-与-redis-分布式缓存">Note 17. 性能加速：Spring Cache 与 Redis 分布式缓存</h1>
+<p>{% note default flat %}<br>
+<strong>摘要</strong>: 本章我们将学习如何利用 <strong>缓存</strong> 解决数据库读压力过大的问题。我们将引入业界标准的 <strong>Redis</strong>，并掌握 Spring Cache 的核心抽象（<code>@Cacheable</code> 三剑客）。我们将重点解决 Redis 的 <strong>JSON 序列化配置</strong> 这一关键痛点，并实战演示如何通过注解实现自动的缓存读写与失效管理。<br>
+{% endnote %}</p>
+<p><strong>本章学习路径</strong></p>
+<ol>
+<li><strong>架构认知</strong>：理解 Spring Cache 抽象层与 Redis 实现层的关系。</li>
+<li><strong>环境集成</strong>：引入 Redis 依赖，配置连接池。</li>
+<li><strong>关键配置</strong>：<strong>自定义 CacheManager</strong>，将默认的 JDK 二进制序列化改为通用的 JSON 格式。</li>
+<li><strong>业务实战</strong>：使用注解改造 Service 层，实现自动缓存。</li>
+</ol>
+<hr>
+<h2 id="171-缓存抽象spring-cache-的设计哲学">17.1. 缓存抽象：Spring Cache 的设计哲学</h2>
+<p>Spring Cache 不是一种具体的缓存实现（像 Redis 或 Ehcache 那样），而是一套 <strong>接口规范</strong>（类似 JDBC）。</p>
+<p>它的核心理念是：<strong>业务代码只与注解打交道，不关心底层用什么缓存</strong>。</p>
+<h3 id="1711-注解三剑客">17.1.1. 注解三剑客</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">注解</th>
+<th style="text-align:left">核心作用</th>
+<th style="text-align:left">执行时机</th>
+<th style="text-align:left">适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong><code>@Cacheable</code></strong></td>
+<td style="text-align:left"><strong>查缓存</strong></td>
+<td style="text-align:left">方法执行 <strong>前</strong>。命中则直接返回，未命中则执行方法并存入缓存。</td>
+<td style="text-align:left"><strong>查询</strong> (SELECT)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>@CachePut</code></strong></td>
+<td style="text-align:left"><strong>更新缓存</strong></td>
+<td style="text-align:left">方法执行 <strong>后</strong>。将方法的返回值更新到缓存中。</td>
+<td style="text-align:left"><strong>新增/修改</strong> (INSERT/UPDATE)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>@CacheEvict</code></strong></td>
+<td style="text-align:left"><strong>删缓存</strong></td>
+<td style="text-align:left">方法执行 <strong>后</strong>（默认）。从缓存中移除指定数据。</td>
+<td style="text-align:left"><strong>删除</strong> (DELETE)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1712-核心属性">17.1.2. 核心属性</h3>
+<ul>
+<li><strong><code>value</code> / <code>cacheNames</code></strong>：缓存的名称（相当于 Redis 中的 Key 前缀，或命名空间）。</li>
+<li><strong><code>key</code></strong>：缓存的唯一标识。支持 <strong>SpEL 表达式</strong>（如 <code>#id</code>, <code>#user.id</code>）。</li>
+</ul>
+<hr>
+<h2 id="172-实战-集成-redis">17.2. [实战] 集成 Redis</h2>
+<p>虽然 Spring Boot 支持简单的 Map 内存缓存，但在生产环境中，<strong>Redis</strong> 是分布式缓存的唯一选择。</p>
+<h3 id="1721-引入依赖">17.2.1. 引入依赖</h3>
+<p><strong>文件路径</strong>: <code>pom.xml</code></p>
+<pre><code class="language-xml">&lt;dependencies&gt;
+    &lt;!-- Redis 核心依赖 --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    
+    &lt;!-- 连接池依赖 (Spring Boot 2.x+ 默认使用 Lettuce，推荐配合连接池) --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-pool2&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<h3 id="1722-配置连接">17.2.2. 配置连接</h3>
+<p><strong>文件路径</strong>: <code>src/main/resources/application.yml</code></p>
+<pre><code class="language-yaml">spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      # password: 123456
+      database: 0
+      lettuce:
+        pool:
+          max-active: 8 # 最大连接数
+          max-wait: -1ms # 最大等待时间
+</code></pre>
+<h3 id="1723-开启缓存">17.2.3. 开启缓存</h3>
+<p>在启动类上添加注解。</p>
+<p><strong>文件路径</strong>: <code>src/main/java/com/example/demo/DemoApplication.java</code></p>
+<pre><code class="language-java">@EnableCaching // 关键：开启缓存注解支持
+@SpringBootApplication
+public class DemoApplication { ... }
+</code></pre>
+<hr>
+<h2 id="173-关键-配置-json-序列化">17.3. [关键] 配置 JSON 序列化</h2>
+<p><strong>痛点</strong>：<br>
+Spring Boot 默认使用 JDK 序列化 (<code>JdkSerializationRedisSerializer</code>)。</p>
+<ul>
+<li><strong>缺点</strong>：生成的 Redis 数据是乱码（二进制流），无法人工阅读，且 Java 对象必须实现 <code>Serializable</code> 接口。</li>
+<li><strong>目标</strong>：我们希望 Redis 里存的是清晰的 <strong>JSON</strong> 字符串。</li>
+</ul>
+<p>我们需要自定义 <code>RedisCacheConfiguration</code>。</p>
+<p><strong>文件路径</strong>: <code>src/main/java/com/example/demo/config/CacheConfig.java</code></p>
+<pre><code class="language-java">package com.example.demo.config;
+
+import org.springframework.boot.autoconfigure.cache.RedisCacheManagerBuilderCustomizer;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializationContext;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+import java.time.Duration;
+
+@Configuration
+@EnableCaching
+public class CacheConfig {
+
+    /**
+     * 配置 Redis 缓存的序列化方式和过期时间
+     */
+    @Bean
+    public RedisCacheConfiguration redisCacheConfiguration() {
+        return RedisCacheConfiguration.defaultCacheConfig()
+                // 1. 设置 Key 为 String 序列化
+                .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
+                // 2. 设置 Value 为 JSON 序列化 (GenericJackson2JsonRedisSerializer)
+                .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer()))
+                // 3. 设置默认过期时间为 1 小时 (防止缓存雪崩)
+                .entryTtl(Duration.ofHours(1))
+                // 4. 不缓存 null 值
+                .disableCachingNullValues();
+    }
+}
+</code></pre>
+<hr>
+<h2 id="174-实战-改造-service-层">17.4. [实战] 改造 Service 层</h2>
+<p>现在，我们为 <code>UserService</code> 添加缓存逻辑。</p>
+<p><strong>文件路径</strong>: <code>src/main/java/com/example/demo/service/impl/UserServiceImpl.java</code></p>
+<pre><code class="language-java">@Service
+public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    /**
+     * 查询：先查缓存，没有再查库
+     * cacheNames = &quot;users&quot;: Redis Key 的前缀
+     * key = &quot;#id&quot;: 使用参数 id 作为 Key 的后缀
+     * 最终 Redis Key: &quot;users::1&quot;
+     */
+    @Override
+    @Cacheable(cacheNames = &quot;users&quot;, key = &quot;#id&quot;)
+    public UserVO getUserById(Long id) {
+        // 模拟耗时操作，验证缓存是否生效
+        System.out.println(&quot;--- 查询数据库 ---&quot;);
+        User user = userMapper.selectById(id);
+        return convertToVO(user);
+    }
+
+    /**
+     * 更新：修改数据库后，自动更新缓存
+     * 注意：方法返回值必须是更新后的数据，Spring 会把返回值放入缓存
+     */
+    @Override
+    @CachePut(cacheNames = &quot;users&quot;, key = &quot;#user.id&quot;)
+    public UserVO updateUser(User user) {
+        userMapper.updateById(user);
+        return convertToVO(userMapper.selectById(user.getId()));
+    }
+
+    /**
+     * 删除：删除数据库后，自动删除缓存
+     */
+    @Override
+    @CacheEvict(cacheNames = &quot;users&quot;, key = &quot;#id&quot;)
+    public void deleteUser(Long id) {
+        userMapper.deleteById(id);
+    }
+}
+</code></pre>
+<hr>
+<h2 id="175-验证效果">17.5. 验证效果</h2>
+<ol>
+<li>
+<p><strong>第一次查询</strong>：</p>
+<ul>
+<li>调用 <code>GET /users/1</code>。</li>
+<li>控制台打印 <code>--- 查询数据库 ---</code>。</li>
+<li>Redis 中出现 Key <code>users::1</code>，Value 为 JSON 字符串。</li>
+</ul>
+</li>
+<li>
+<p><strong>第二次查询</strong>：</p>
+<ul>
+<li>再次调用 <code>GET /users/1</code>。</li>
+<li>控制台 <strong>没有</strong> 打印日志，说明数据库未被访问，直接走了缓存。</li>
+</ul>
+</li>
+<li>
+<p><strong>更新数据</strong>：</p>
+<ul>
+<li>调用 <code>POST /users/update</code> 修改数据。</li>
+<li>Redis 中的 <code>users::1</code> 值自动更新。</li>
+</ul>
+</li>
+<li>
+<p><strong>再次查询</strong>：</p>
+<ul>
+<li>调用 <code>GET /users/1</code>，返回的是更新后的新数据。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="176-本章总结与缓存速查">17.6. 本章总结与缓存速查</h2>
+<p><strong>摘要回顾</strong><br>
+本章我们为应用装上了“加速器”。通过集成 Redis 和 Spring Cache，我们仅用几个注解就实现了标准的缓存读写策略（Cache-Aside Pattern）。特别需要注意的是 JSON 序列化的配置，这是让 Redis 数据具备可读性和通用性的关键。</p>
+<p><strong>遇到以下 3 种缓存场景时，请直接参考代码模版：</strong></p>
+<h3 id="1-场景一标准单体查询缓存">1. 场景一：标准单体查询缓存</h3>
+<p><strong>需求</strong>：根据 ID 查询详情，缓存 1 小时（配置中设置）。<br>
+<strong>模版</strong>：</p>
+<pre><code class="language-java">@Cacheable(cacheNames = &quot;product&quot;, key = &quot;#id&quot;)
+public Product getProduct(Long id) { ... }
+</code></pre>
+<h3 id="2-场景二组合键缓存">2. 场景二：组合键缓存</h3>
+<p><strong>需求</strong>：根据“类型”和“城市”查询列表，Key 需要唯一。<br>
+<strong>模版</strong>：</p>
+<pre><code class="language-java">// Redis Key: &quot;shops::Food:Beijing&quot;
+@Cacheable(cacheNames = &quot;shops&quot;, key = &quot;#type + ':' + #city&quot;)
+public List&lt;Shop&gt; getShops(String type, String city) { ... }
+</code></pre>
+<h3 id="3-场景三清空整个缓存分区">3. 场景三：清空整个缓存分区</h3>
+<p><strong>需求</strong>：后台修改了全局配置，需要清空所有 <code>config</code> 缓存。<br>
+<strong>模版</strong>：</p>
+<pre><code class="language-java">@CacheEvict(cacheNames = &quot;config&quot;, allEntries = true)
+public void reloadConfig() { ... }
+</code></pre>
+<h3 id="4-核心避坑指南">4. 核心避坑指南</h3>
+<ol>
+<li>
+<p><strong>缓存不生效 (自调用)</strong></p>
+<ul>
+<li><strong>现象</strong>：<code>this.getUserById(1)</code> 仍然查数据库。</li>
+<li><strong>原因</strong>：和 <code>@Transactional</code> 一样，<code>@Cacheable</code> 基于 AOP 代理。类内部自调用不走代理。</li>
+<li><strong>对策</strong>：外部调用，或注入 <code>self</code> 代理对象调用。</li>
+</ul>
+</li>
+<li>
+<p><strong>序列化异常</strong></p>
+<ul>
+<li><strong>现象</strong>：报错 <code>NotSerializableException</code> 或 JSON 解析错误。</li>
+<li><strong>原因</strong>：对象没有无参构造器（Jackson 需要），或者存入和读取时的序列化配置不一致。</li>
+<li><strong>对策</strong>：确保 DTO/VO 有 <code>@Data</code> (含无参构造)，且 Redis 配置统一。</li>
+</ul>
+</li>
+<li>
+<p><strong>缓存一致性</strong></p>
+<ul>
+<li><strong>现象</strong>：数据库改了，缓存还是旧的。</li>
+<li><strong>原因</strong>：忘记加 <code>@CachePut</code> 或 <code>@CacheEvict</code>；或者手动改了数据库但没清缓存。</li>
+<li><strong>对策</strong>：保证所有数据修改入口都加上了缓存更新注解；设置合理的 TTL (过期时间) 作为最后一道防线。</li>
+</ul>
+</li>
+</ol>
+<hr>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,735 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>户晨风 | Gridea</title>
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://mx.315996.xyz/favicon.ico">
+<link rel="stylesheet" href="https://mx.315996.xyz/styles/main.css">
+
+<script src="https://mx.315996.xyz/media/js/jquery.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/masonry.pkgd.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/aos.js"></script>
+<script src="https://mx.315996.xyz/media/js/pace.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/view-image.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/functions.js"></script>
+<script>
+  // 所有文章数据（排除隐藏文章）
+  window.allPosts = [
+    
+      
+        {
+          title: '网站公告',
+          link: 'https://mx.315996.xyz/post/nTTpaiquXt/',
+          fileName: 'nTTpaiquXt'
+        },
+      
+    
+      
+        {
+          title: 'LaunchNext',
+          link: 'https://mx.315996.xyz/post/2u8mrEiID7/',
+          fileName: '2u8mrEiID7'
+        },
+      
+    
+      
+        {
+          title: '辟邪',
+          link: 'https://mx.315996.xyz/post/000016/',
+          fileName: '000016'
+        },
+      
+    
+      
+        {
+          title: '义和团',
+          link: 'https://mx.315996.xyz/post/000015/',
+          fileName: '000015'
+        },
+      
+    
+      
+        {
+          title: '我要验牌',
+          link: 'https://mx.315996.xyz/post/000014/',
+          fileName: '000014'
+        },
+      
+    
+      
+        {
+          title: '唐永平',
+          link: 'https://mx.315996.xyz/post/000013/',
+          fileName: '000013'
+        },
+      
+    
+      
+        {
+          title: '卞国泉',
+          link: 'https://mx.315996.xyz/post/000012/',
+          fileName: '000012'
+        },
+      
+    
+      
+        {
+          title: '孙莉',
+          link: 'https://mx.315996.xyz/post/000011/',
+          fileName: '000011'
+        },
+      
+    
+      
+        {
+          title: '刘智辰',
+          link: 'https://mx.315996.xyz/post/000010/',
+          fileName: '000010'
+        },
+      
+    
+      
+        {
+          title: 'Note 17. 性能加速',
+          link: 'https://mx.315996.xyz/post/pai2fiCnOi/',
+          fileName: 'pai2fiCnOi'
+        },
+      
+    
+      
+        {
+          title: '户晨风',
+          link: 'https://mx.315996.xyz/post/000009/',
+          fileName: '000009'
+        },
+      
+    
+      
+        {
+          title: '七十七',
+          link: 'https://mx.315996.xyz/post/000008/',
+          fileName: '000008'
+        },
+      
+    
+      
+        {
+          title: '吴海宁',
+          link: 'https://mx.315996.xyz/post/000006/',
+          fileName: '000006'
+        },
+      
+    
+      
+        {
+          title: '石金香',
+          link: 'https://mx.315996.xyz/post/0007/',
+          fileName: '0007'
+        },
+      
+    
+      
+        {
+          title: '王子怡',
+          link: 'https://mx.315996.xyz/post/000005/',
+          fileName: '000005'
+        },
+      
+    
+      
+        {
+          title: '红岩',
+          link: 'https://mx.315996.xyz/post/0004/',
+          fileName: '0004'
+        },
+      
+    
+      
+        {
+          title: 'ChatGPT Atlas 浏览器上手',
+          link: 'https://mx.315996.xyz/post/xu4cRvA6KX/',
+          fileName: 'xu4cRvA6KX'
+        },
+      
+    
+      
+        {
+          title: '王子铭',
+          link: 'https://mx.315996.xyz/post/000003/',
+          fileName: '000003'
+        },
+      
+    
+      
+        {
+          title: '卞羽曦',
+          link: 'https://mx.315996.xyz/post/000002/',
+          fileName: '000002'
+        },
+      
+    
+      
+        {
+          title: '黄晋鹏',
+          link: 'https://mx.315996.xyz/post/000001/',
+          fileName: '000001'
+        },
+      
+    
+      
+        {
+          title: '重点关爱（家访）学生',
+          link: 'https://mx.315996.xyz/post/7UCVAYPAk3/',
+          fileName: '7UCVAYPAk3'
+        },
+      
+    
+      
+        {
+          title: '202504学生事件汇总',
+          link: 'https://mx.315996.xyz/post/uqLLoi7ukt/',
+          fileName: 'uqLLoi7ukt'
+        },
+      
+    
+      
+        {
+          title: '入站必读',
+          link: 'https://mx.315996.xyz/post/hi/',
+          fileName: 'hi'
+        },
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  ];
+  
+  // Modern Header Functions
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+    }
+    
+    // Back to top from header with scroll percentage
+    const headerBackToTop = document.getElementById('header-back-to-top');
+    const scrollPercentEl = headerBackToTop ? headerBackToTop.querySelector('.scroll-percent') : null;
+    
+    if (headerBackToTop) {
+      // Click to scroll to top
+      headerBackToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Update scroll percentage
+      function updateScrollPercent() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        if (docHeight <= 0) {
+          headerBackToTop.classList.remove('visible');
+          return;
+        }
+        
+        const percent = Math.min(100, Math.max(0, Math.round((scrollTop / docHeight) * 100)));
+        
+        if (scrollPercentEl) {
+          scrollPercentEl.textContent = percent;
+        }
+        
+        if (scrollTop <= 10) {
+          headerBackToTop.classList.remove('visible');
+        } else {
+          headerBackToTop.classList.add('visible');
+        }
+      }
+      
+      // Initial check
+      updateScrollPercent();
+      
+      // Update on scroll
+      window.addEventListener('scroll', updateScrollPercent, { passive: true });
+    }
+    
+    // Random post - 随机逛逛（桌面端和移动端）
+    function goToRandomPost() {
+      if (window.allPosts && window.allPosts.length > 0) {
+        const availablePosts = window.allPosts.filter(function(post) {
+          return post && post.link;
+        });
+        if (availablePosts.length > 0) {
+          const randomIndex = Math.floor(Math.random() * availablePosts.length);
+          const randomPost = availablePosts[randomIndex];
+          if (randomPost && randomPost.link) {
+            window.location.href = randomPost.link;
+          }
+        }
+      }
+    }
+    
+    const randomPostBtn = document.querySelector('.random-post');
+    if (randomPostBtn) {
+      randomPostBtn.addEventListener('click', goToRandomPost);
+    }
+    
+    // 移动端菜单中的随机逛逛
+    const mobileRandomPostBtn = document.querySelector('.mobile-random-post');
+    if (mobileRandomPostBtn) {
+      mobileRandomPostBtn.addEventListener('click', goToRandomPost);
+    }
+    
+    // Control panel (placeholder)
+    const controlPanelBtn = document.querySelector('.control-panel');
+    if (controlPanelBtn) {
+      controlPanelBtn.addEventListener('click', function() {
+        // 可以在这里添加中控台功能
+        console.log('Control panel clicked');
+      });
+    }
+    
+    // 移动端点击搜索时自动关闭菜单
+    const mobileSearchLinks = document.querySelectorAll('.mobile-menu a[href="#search-lightbox"]');
+    mobileSearchLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (mobileMenu) {
+          mobileMenu.classList.remove('active');
+        }
+      });
+    });
+    
+    // 搜索弹窗功能
+    const searchLightbox = document.getElementById('search-lightbox');
+    const searchBtns = document.querySelectorAll('a[href="#search-lightbox"]');
+    
+    // 打开搜索弹窗
+    searchBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (searchLightbox) {
+          searchLightbox.classList.add('search-open');
+          const searchInput = searchLightbox.querySelector('#s');
+          if (searchInput) {
+            setTimeout(function() {
+              searchInput.focus();
+            }, 100);
+          }
+        }
+      });
+    });
+    
+    // 点击背景关闭搜索弹窗
+    if (searchLightbox) {
+      searchLightbox.addEventListener('click', function(e) {
+        if (e.target === searchLightbox) {
+          searchLightbox.classList.remove('search-open');
+        }
+      });
+      
+      // ESC键关闭搜索弹窗
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchLightbox.classList.contains('search-open')) {
+          searchLightbox.classList.remove('search-open');
+        }
+      });
+      
+      // 搜索表单提交
+      const searchForm = document.getElementById('gridea-search-form');
+      if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const searchInput = searchForm.querySelector('#s');
+          if (searchInput && searchInput.value.trim()) {
+            window.location.href = '/search/index.html?q=' + encodeURIComponent(searchInput.value.trim());
+          }
+        });
+      }
+    }
+  });
+</script>
+</head>
+    <meta name="referrer" content="never">
+    <meta name="description" content="MX-kno000009
+
+户晨风（1998年—）是中国大陆的一名网络红人、主播，以随机给陌生人钱并采访他们、测试购买力的视频而走红。在直播中，他常常会与网友聊时事，或就一些观点激烈辩论。其直播内容和视频创作在中国互联网上多次引发争议，相关..." />
+    <meta name="keywords" content="词条" />
+    <script src="https://mx.315996.xyz/media/js/waterfall.min.js"></script>
+    <script src="https://mx.315996.xyz/media/js/prism.min.js"></script>
+    <script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+  </head>
+  <body>
+            <header id="header" class="modern-header">
+        <div class="header-container">
+          <!-- 左侧：头像和名字 -->
+          <div class="header-brand">
+            <a href="https://mx.315996.xyz" class="brand-link">
+              <img src="https://mx.315996.xyz/images/avatar.png" alt="Gridea" class="brand-avatar">
+              <span class="brand-name">Gridea</span>
+            </a>
+          </div>
+
+          <!-- 中间：菜单 -->
+          <nav class="header-nav">
+            <ul class="nav-menu">
+              <li class="">
+                <a href="https://mx.315996.xyz">首页</a>
+              </li>
+              
+                <li>
+                  <a href="/archives">归档</a>
+                </li>
+              
+                <li>
+                  <a href="/tags">标签</a>
+                </li>
+              
+                <li>
+                  <a href="/friends">友链</a>
+                </li>
+              
+                <li>
+                  <a href="/post/about">关于</a>
+                </li>
+              
+            </ul>
+          </nav>
+
+          <!-- 右侧：随机文章、搜索、回到顶部 -->
+          <div class="header-actions">
+            <a href="javascript:void(0)" class="action-btn random-post" title="随机逛逛">
+              <svg class="icon-shuffle" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z"/>
+              </svg>
+            </a>
+            <a href="#search-lightbox" class="action-btn search-btn lightbox mfp-inline" title="搜索">
+              <i class="fa fa-search"></i>
+            </a>
+            <a href="javascript:void(0)" id="header-back-to-top" class="action-btn back-to-top" title="回到顶部">
+              <span class="scroll-percent">0</span>
+              <i class="fa fa-arrow-up"></i>
+            </a>
+            <!-- 移动端菜单按钮（放在header-actions内） -->
+            <div class="mobile-menu-toggle">
+              <i class="fa fa-bars"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu">
+          <ul class="mobile-nav-menu">
+            <li class="">
+              <a href="https://mx.315996.xyz">首页</a>
+            </li>
+            
+              <li>
+                <a href="/archives">归档</a>
+              </li>
+            
+              <li>
+                <a href="/tags">标签</a>
+              </li>
+            
+              <li>
+                <a href="/friends">友链</a>
+              </li>
+            
+              <li>
+                <a href="/post/about">关于</a>
+              </li>
+            
+            <li class="mobile-menu-divider"></li>
+            <li class="mobile-menu-action">
+              <a href="javascript:void(0)" class="mobile-random-post">
+                <svg class="icon-shuffle" viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="currentColor" d="M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z"/>
+                </svg>
+                <span>随机逛逛</span>
+              </a>
+            </li>
+            <li class="mobile-menu-action">
+              <a href="#search-lightbox" class="lightbox mfp-inline">
+                <i class="fa fa-search"></i>
+                <span>搜索</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- 搜索弹窗 -->
+      <div id="search-lightbox" class="mfp-hide">
+        <div class="search-modal">
+          <div class="search-modal-header">
+            <h3 class="search-modal-title">搜索文章</h3>
+          </div>
+          <div class="search-modal-body">
+            <form id="gridea-search-form" data-update="1771503393672" action="/search/index.html" class="search-form">
+              <div class="search-input-wrapper">
+                <input type="text" name="q" id="s" value="" class="search-field" placeholder="输入关键词搜索..." aria-label="输入关键词搜索..." required="">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 文章头部区域 - 纯色背景 -->
+      <div class="post-header" id="post-header">
+        <div class="post-header-content">
+          <!-- 标签 -->
+          <div class="post-header-tags">
+            
+              <a href="https://mx.315996.xyz/tag/YIwO87EdNu/" class="post-tag"># 词条</a>
+            
+          </div>
+          
+          <!-- 标题 -->
+          <h1 class="post-header-title">户晨风</h1>
+          
+          <!-- 元信息 -->
+          <div class="post-header-meta">
+            <span class="meta-item" title="文章字数">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h8v2H8v-2zm0 4h8v2H8v-2zm0-8h3v2H8V8z"/></svg>
+              <span id="word-count">0</span> 字
+            </span>
+            <span class="meta-item" title="阅读时间">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <span id="read-time">0</span> 分钟
+            </span>
+            <span class="meta-item" title="发布时间">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+              2025-12-13
+            </span>
+            <span class="meta-item" title="本页阅读量">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              <span id="busuanzi_value_page_pv">0</span> 次
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text" id="post-content-text">
+                  <p>MX-kno000009</p>
+<!-- more -->
+<p>户晨风（1998年—）是中国大陆的一名网络红人、主播，以随机给陌生人钱并采访他们、测试购买力的视频而走红。在直播中，他常常会与网友聊时事，或就一些观点激烈辩论。其直播内容和视频创作在中国互联网上多次引发争议，相关账号也数次被封禁。自2025年9月20日起，户晨风的所有实名社交账号再次被封禁。<br>
+<ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E5%AE%B6%E5%BA%AD%E8%83%8C%E6%99%AF">家庭背景</a></li>
+<li><a href="#%E5%AD%A6%E7%94%9F%E6%97%B6%E4%BB%A3">学生时代</a></li>
+<li><a href="#%E6%B1%82%E8%81%8C%E7%BB%8F%E5%8E%86">求职经历</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%88%86%E7%BA%A2">第一次爆红</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%81%AD%E9%81%87%E5%B0%81%E7%A6%81">第二次遭遇封禁</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E8%87%B3%E4%BA%94%E6%AC%A1%E5%B0%81%E7%A6%81">第三至五次封禁</a></li>
+<li><a href="#%E5%AE%89%E5%8D%93%E8%8B%B9%E6%9E%9C%E8%AE%BA">安卓苹果论</a></li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="前言">前言</h2>
+<p>当98年的青年在直播间里高骂&quot;你是典型的安卓逻辑、安卓人、安卓学历、安卓素质、安卓态度&quot;时，他是否想过，正因为这种极端言论，从草根网红变成全网封禁的反面教材？从&quot;普通人一天的购买力&quot;等等一系列接地气内容，到将消费者按照手机品牌划分为“苹果”和“安卓”的概念，安卓用户象征廉价、低端、劣质，苹果用户则象征精英、高端和优质时，这套标准更延伸出一套完整的“鄙视链”，他的每一步都在将自己推向互联网的悬崖。他就是有着微博粉丝22万，B站粉丝80万，抖音粉丝最高125万粉丝的博主户晨风。<br>
+一句“手机就是苹果”看似简单，却隐藏着极端化、标签化的表达方式，《法治在线》中提到：“从展示跨国消费差异，到制造阶层对立，户晨风以苹果、安卓论收割流量。终因突破监管红线，9月20号他在多个平台的账号被封禁，内容被清空，随后账号被彻底注销。”《法治在线》还表示：“一个人使用什么品牌的手机，或者习惯使用哪种手机操作系统，本身只是消费习惯问题。但是在户晨风的精心设计下，却变成了身份档次的标识。”<br>
+没错，他将住房、汽车、消费习惯乃至学历等都进行对应划分，如特斯拉是“苹果车”，山姆是“苹果超市”，本科以上是“苹果学历”，格局差、隔音差的住宅是“安卓房”，养捡的流浪猫是“安卓猫”等。</p>
+<p>2025年9月22日，中央网信办在全国范围内启动为期两个月的“清朗”专项行动，重点整治网络煽动对立、散布谣言、宣扬暴力、渲染消极等突出问题。最终让户晨风成为“清朗”专项行动的第一个封禁对象。其微博、抖音、B站等多个社交平台的账号遭到封禁或功能限制，10月被全网封禁，11月5日，央视新闻点名批评《网红炒作“苹果人、安卓人”恶意制造对立，封禁！治理乱象，平台监管须下“决心”，莫让平台“流量算盘” 打散社会信任！》，都说“央妈出手，不死也得掉层皮”，这话一点没错！</p>
+<p>户晨风为了流量和利益不择手段，毫无底线地制造对立和焦虑，破坏了网络环境的和谐，其言论和行为具有很强的负面影响，会误导大众尤其是青少年的价值观。</p>
+<p>通过这件事，再次明确网络并非法外之地。言论自由从来不是无限的，它必须与公共利益和社会秩序相平衡。追求流量不能越过底线。平台设定边界，不是为了压制声音，而是为了保障更多声音能在健康环境中交流。真正的自由是在边界内创造价值。唯有理性、基于事实的讨论，才能推动社会思考与进步。清朗行动正是对这类极端言论的必要回应，也是构建健康网络空间的关键一步。</p>
+<p>数字化生存时代，网络空间就是人们共同的精神家园。一个充斥着戾气、撕裂和对立的环境，对任何人都没有益处。手机本身是无辜的，然而以手机为标签，人为制造社会壁垒，最终将伤害到我们每一个人。</p>
+<h2 id="家庭背景">家庭背景</h2>
+<p>1998年注定是不平凡的一年，因为在这一年，苹果公司联合创始人，曾任苹果公司首席执行官的史蒂夫·乔布斯（Steve Jobs）发布了一款跨时代产品——iMac G3。时间来到1997年，乔布斯回到苹果公司，重新担任首席执行官（当时是临时的），并与公司的设计主管乔纳森·艾维达成共识。苹果公司的工程师和设计师最终推出了圆胖有趣的iMac G3计算机，这款产品影响之深远，不仅改变了苹果未来20年的发展轨迹，居然还悄悄影响了一个远在大洋彼岸的一个普通家庭，就在那年8月，户晨风这位“魔童”降世。</p>
+<p>他自称是江苏镇江人，网传实际是河南省新乡市长垣市，其祖上世代务农，祖辈目不识丁，一家人的温饱始终是悬在心头的巨石，甚至曾有过颠沛流离的逃荒经历。他的童年被贫困深刻烙印：约 5 岁时，曾与父亲在江苏镇江拍摄的合影成为早期为数不多的生活印记，而 “冬天雪天和母亲提 5 个暖水瓶去开水房打水” 的场景更令他毕生难忘 —— 彼时 6 岁的他，身形还透着孩童的单薄，小手紧紧攥着沉重的暖水瓶，需走几步歇一下，一壶 2 毛钱的开水因比自家烧煮划算，成为这个家庭精打细算的日常。</p>
+<p>转机出现在改革开放后，1978年12月，中国共产党十一届三中全会在北京召开，会议作出了把党和国家的工作中心转移到经济建设上来，实行改革开放的历史性决策。此后，中国开始逐步推进经济、政治、文化等各个领域的改革，同时打开国门，引进国外的资金、技术和管理经验，推动中国经济社会快速发展。这时他的父亲凭着灵活的头脑，在市场经济的大潮中挣得了一份家业。2003年，父亲终于将他与母亲接进城里生活，从此，这个家族才算真正告别了面朝黄土背朝天的岁月，迈入了虽不富裕但足以温饱的新阶段，在江苏镇江的城中村内安顿下来，开启了全新的生活。户晨风曾在采访中说“小康算得上，但是多富裕谈不上，父亲算是个小有成就的生意人，母亲是家庭主妇，家庭年收入几十万”</p>
+<h2 id="学生时代">学生时代</h2>
+<p>童年时的户晨风曾被认为 “聪明伶俐”。在小学时，户晨风成绩尚可。毕业于扬中市第二实验小学。据户晨风本人自述，他在初中的时候，家里人就给了他1万人民币专门让他去炒股，他当时买的是重庆啤酒。</p>
+<p>但进入初中后逐渐贪玩放纵，成绩断崖式下滑，成了“差生”，考出了数学30，英语40的“好”成绩。他发文说“倒不是因为户先生胡作非为，就是单纯的不喜欢刻板的应试教育和学校教的内容，讨厌循规蹈矩”这可以看出当时他是一个具有对教育现状持有批判态度、并能表达自己观点的人。</p>
+<p>2011年，户晨风13岁，当时京沪高铁刚开通，户晨风的家人就带他来上海虹桥高铁站体验了磁悬浮。</p>
+<p>15岁那年，不出意外户晨风中考连普通高中都没考上，只好辗转去了国际高中。他的最高学历教育背景为江苏省木渎高级中学国际部，该校系省级示范中学。同为木渎高级中学知名校友，被保送至中国人自主创办的首所高等院校——复旦大学的未明子（本名刘司墨）曾对户晨风作出锐评，认为其与户晨风不算严格意义上的校友，原因在于户晨风并非通过常规考试入学，本质上是凭借支付学费得以进入该校，学费大致在4 - 10万区间，这也侧面反映出户晨风家庭对其教育的重视。</p>
+<h2 id="求职经历">求职经历</h2>
+<p>高中毕业后，本能走上签证留学加拿大这条路的户晨风知识水平卡这了，他认为自身难以考入优质高校，且学校缺乏良好的学习氛围，所以没有接着读下去。 18 岁的户晨风成为 “无产者”，正式踏入社会谋生，转行当汽修工。2016年的冬天，户晨风从事了6个月的汽修工，每天工作就是修修轮胎，干的是最脏最累的活。他当汽修工的原因是“纯粹是因为喜欢汽车，喜欢机械，所以去当汽修工的，我说了，我喜欢学习自己喜欢的知识，所以我当汽修工的时候，我的师傅不太负责任，基本不教我汽车知识，我就自学了汽车发动机原理，汽车基本结构等等，都是很基本的内容了”。</p>
+<p>他第一个月的工资只有800 元人民币的工资，这户晨风怎么受得了啊，这还没他炒股挣得多，2017年一头扎进机械加工，同样又脏又累还危险，干了一年。</p>
+<p>2018年6月，户晨风走投无路来到成都，人生要重新开始，他做出新的决定，为自己拍了证件照，开始找工作。</p>
+<p>他首选应聘汽车销售，因为是高中学历没人要，他索性应聘私募基金岗位，经过两个月的刷题备考获得相关证书。2019年2月，他入职某家族资产管理公司，进入办公室工作，然而工作未满3个月，即同年5月便离职。2019年，他通过股票投资赚取了人生中的第一个一百万元；2021年，其投资出现轻微亏损，日子还过得去。后来户晨风又找到工作了自2023年，户晨风的母亲得了癌症，他决定重新振作，同年2月起，他开始全职从事主播工作并运营自媒体，自此正式开启了他的短视频生涯。</p>
+<h2 id="第一次爆红">第一次爆红</h2>
+<p>户晨风2023年2月开始全职做自媒体，他最开始在哔哩哔哩平台做视频的，是一名UP主，他以“百元购买力挑战”和“基层养老实录”等多样化的视频形式，深入聚焦并探讨社会民生领域的诸多问题，十分接地气。其中包括但不限于物价波动、老年人养老现状等热点议题。让一些平时容易被忽视的群体和问题得到了更多关注。代表作有《100元人民币，在泰国首都曼谷的购买力到底有多强？》、《新西兰切菜工，1天工资能买多少东西？》。其作品在短时间内吸引了大量粉丝。<br>
+2023年3月，户晨风采访了成都街头一位来自南充的78岁退休老人，每月仅靠107元人民币的养老金生活。户晨风陪她逛超市并坚持为她结了账。视频在走红后很快被删除，户晨风的账号也遭到封禁。后来，户晨风本人表示，他拍摄这些视频的初衷是希望能“赚点钱”，并推动社会“向前一点点”。5月13日，户晨风称自己遭遇死亡威胁，并已经报警。</p>
+<h2 id="第二次遭遇封禁">第二次遭遇封禁</h2>
+<p>2024年4月，其在一次直播连麦中被提问政治敏感话题，户晨风当时立即挂断联系，反复训斥“疯了吧”“严重违反直播规范”“太可怕了”，但认为避免封号。</p>
+<h2 id="第三至五次封禁">第三至五次封禁</h2>
+<p>在此期间他因发表了一系列争议言论而多次被短暂封禁。分别为：2024年5月，在直播里贬低国产车、国产手机，并说“电车只选特斯拉”被封；8月发言称“没有国际品牌与开欧美日航线的城市，不配留年轻人”，又被封；2025年1月，因爆出“月入5000的人不配和我对话”“年夜饭不如麦当劳”等言论被封，但期间的处置都是较快解除。</p>
+<h2 id="安卓苹果论">安卓苹果论</h2>
+<blockquote>
+<p>你是典型的安卓逻辑、安卓人、安卓学历、安卓素质、安卓态度</p>
+</blockquote>
+<p><img src="https://mx.315996.xyz/post-images/1765581144074.jpg" alt="" loading="lazy"><br>
+<img src="https://mx.315996.xyz/post-images/1765581161707.jpg" alt="" loading="lazy"><br>
+2025年8月，户晨风将消费者按照手机品牌划分为“苹果”和“安卓”的概念，安卓用户 象征廉价、低端、劣质， 苹果用户则象征精英、高端和优质： 直播中的一段“你是典型的安卓逻辑、安卓人、安卓学历、安卓素质、安卓态度”让该概念成为网络迷因。这套标准更延伸出一套完整的“鄙视链”，将住房、汽车、消费习惯乃至学 历等都进行对应划分， 如特斯拉是“苹果车”， 山姆是“苹果超市”， 本科以上是“苹果学历”， 格局差、隔音差的住宅是“安卓房”， 养非名贵品种的猫是“安卓猫”。由此爆火 后，户晨风开始推出祝福陌生人“越来越苹果”短视频业务，几十秒视频要价2999 元； 据他本人在直播中透露， 这之后他的月收入超过了60万元。这种分类方式既 作为网络迷因受到欢迎，影视飓风股东李四维也曾购买过户晨风的祝福视频</p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115214058063315&bvid=BV1Xbp2zbErG&cid=32423807024&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<p><a href="https://www.douyin.com/video/7550237658451266825">李四维回应视频</a><br>
+也迅速激起许多网友的不满， 有个别网民甚至制作恶搞图片， 其中户晨风作为“用户”与蒂姆·库克(Tim·Cook)等苹果公司高管并列。</p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mx.315996.xyz/post-images/pai2fiCnOi.webp');"></div>
+                 <a href="https://mx.315996.xyz/post/pai2fiCnOi/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2025-12-16">2025-12-16</time>
+                  <h4 class="title white no-margin">Note 17. 性能加速</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mx.315996.xyz/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mx.315996.xyz/post-images/000008.webp');"></div>
+                 <a href="https://mx.315996.xyz/post/000008/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2025-12-13">2025-12-13</time>
+                  <h4 class="title white no-margin">七十七</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mx.315996.xyz/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo.315996.xyz/',
+    el: '#tcomment',
+  })
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="published border-effect">
+          ©2019 共 27 篇文章
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </div>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+
+      
+    <script src="https://mx.315996.xyz/media/js/functions-post.js"></script>
+
+    <script>
+      // 计算文章字数和阅读时间
+      document.addEventListener('DOMContentLoaded', function() {
+        const contentText = document.getElementById('post-content-text');
+        if (contentText) {
+          // 获取纯文本内容
+          const text = contentText.innerText || contentText.textContent || '';
+          // 计算中文字符数（包括标点）
+          const cnChars = text.match(/[\u4e00-\u9fa5]/g) || [];
+          // 计算英文单词数
+          const enWords = text.match(/[a-zA-Z]+/g) || [];
+          // 总字数 = 中文字符 + 英文单词
+          const wordCount = cnChars.length + enWords.length;
+          
+          // 阅读时间（按每分钟300字计算）
+          const readTime = Math.max(1, Math.ceil(wordCount / 300));
+          
+          // 更新显示
+          const wordCountEl = document.getElementById('word-count');
+          const readTimeEl = document.getElementById('read-time');
+          
+          if (wordCountEl) wordCountEl.textContent = wordCount;
+          if (readTimeEl) readTimeEl.textContent = readTime;
+        }
+        
+        // 从封面图提取主色调
+        const postHeader = document.getElementById('post-header');
+        const featureImage = 'https://mx.315996.xyz/post-images/000009.webp';
+        
+        if (featureImage && postHeader) {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 1;
+            canvas.height = 1;
+            ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 1, 1);
+            
+            try {
+              const pixel = ctx.getImageData(0, 0, 1, 1).data;
+              const r = pixel[0];
+              const g = pixel[1];
+              const b = pixel[2];
+              
+              // 调整亮度，使颜色更鲜艳
+              const factor = 1.2;
+              const adjustedR = Math.min(255, Math.round(r * factor));
+              const adjustedG = Math.min(255, Math.round(g * factor));
+              const adjustedB = Math.min(255, Math.round(b * factor));
+              
+              postHeader.style.backgroundColor = `rgb(${adjustedR}, ${adjustedG}, ${adjustedB})`;
+            } catch (e) {
+              // 如果提取失败，使用默认主题色
+              postHeader.style.backgroundColor = '#105080';
+            }
+          };
+          img.onerror = function() {
+            // 图片加载失败时使用默认主题色
+            postHeader.style.backgroundColor = '#105080';
+          };
+          img.src = featureImage;
+        }
+      });
+    </script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>

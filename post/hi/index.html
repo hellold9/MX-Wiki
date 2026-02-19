@@ -1,0 +1,1390 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>入站必读 | Gridea</title>
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://mx.315996.xyz/favicon.ico">
+<link rel="stylesheet" href="https://mx.315996.xyz/styles/main.css">
+
+<script src="https://mx.315996.xyz/media/js/jquery.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/masonry.pkgd.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/aos.js"></script>
+<script src="https://mx.315996.xyz/media/js/pace.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/view-image.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/functions.js"></script>
+<script>
+  // 所有文章数据（排除隐藏文章）
+  window.allPosts = [
+    
+      
+        {
+          title: '网站公告',
+          link: 'https://mx.315996.xyz/post/nTTpaiquXt/',
+          fileName: 'nTTpaiquXt'
+        },
+      
+    
+      
+        {
+          title: 'LaunchNext',
+          link: 'https://mx.315996.xyz/post/2u8mrEiID7/',
+          fileName: '2u8mrEiID7'
+        },
+      
+    
+      
+        {
+          title: '辟邪',
+          link: 'https://mx.315996.xyz/post/000016/',
+          fileName: '000016'
+        },
+      
+    
+      
+        {
+          title: '义和团',
+          link: 'https://mx.315996.xyz/post/000015/',
+          fileName: '000015'
+        },
+      
+    
+      
+        {
+          title: '我要验牌',
+          link: 'https://mx.315996.xyz/post/000014/',
+          fileName: '000014'
+        },
+      
+    
+      
+        {
+          title: '唐永平',
+          link: 'https://mx.315996.xyz/post/000013/',
+          fileName: '000013'
+        },
+      
+    
+      
+        {
+          title: '卞国泉',
+          link: 'https://mx.315996.xyz/post/000012/',
+          fileName: '000012'
+        },
+      
+    
+      
+        {
+          title: '孙莉',
+          link: 'https://mx.315996.xyz/post/000011/',
+          fileName: '000011'
+        },
+      
+    
+      
+        {
+          title: '刘智辰',
+          link: 'https://mx.315996.xyz/post/000010/',
+          fileName: '000010'
+        },
+      
+    
+      
+        {
+          title: 'Note 17. 性能加速',
+          link: 'https://mx.315996.xyz/post/pai2fiCnOi/',
+          fileName: 'pai2fiCnOi'
+        },
+      
+    
+      
+        {
+          title: '户晨风',
+          link: 'https://mx.315996.xyz/post/000009/',
+          fileName: '000009'
+        },
+      
+    
+      
+        {
+          title: '七十七',
+          link: 'https://mx.315996.xyz/post/000008/',
+          fileName: '000008'
+        },
+      
+    
+      
+        {
+          title: '吴海宁',
+          link: 'https://mx.315996.xyz/post/000006/',
+          fileName: '000006'
+        },
+      
+    
+      
+        {
+          title: '石金香',
+          link: 'https://mx.315996.xyz/post/0007/',
+          fileName: '0007'
+        },
+      
+    
+      
+        {
+          title: '王子怡',
+          link: 'https://mx.315996.xyz/post/000005/',
+          fileName: '000005'
+        },
+      
+    
+      
+        {
+          title: '红岩',
+          link: 'https://mx.315996.xyz/post/0004/',
+          fileName: '0004'
+        },
+      
+    
+      
+        {
+          title: 'ChatGPT Atlas 浏览器上手',
+          link: 'https://mx.315996.xyz/post/xu4cRvA6KX/',
+          fileName: 'xu4cRvA6KX'
+        },
+      
+    
+      
+        {
+          title: '王子铭',
+          link: 'https://mx.315996.xyz/post/000003/',
+          fileName: '000003'
+        },
+      
+    
+      
+        {
+          title: '卞羽曦',
+          link: 'https://mx.315996.xyz/post/000002/',
+          fileName: '000002'
+        },
+      
+    
+      
+        {
+          title: '黄晋鹏',
+          link: 'https://mx.315996.xyz/post/000001/',
+          fileName: '000001'
+        },
+      
+    
+      
+        {
+          title: '重点关爱（家访）学生',
+          link: 'https://mx.315996.xyz/post/7UCVAYPAk3/',
+          fileName: '7UCVAYPAk3'
+        },
+      
+    
+      
+        {
+          title: '202504学生事件汇总',
+          link: 'https://mx.315996.xyz/post/uqLLoi7ukt/',
+          fileName: 'uqLLoi7ukt'
+        },
+      
+    
+      
+        {
+          title: '入站必读',
+          link: 'https://mx.315996.xyz/post/hi/',
+          fileName: 'hi'
+        },
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  ];
+  
+  // Modern Header Functions
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+    }
+    
+    // Back to top from header with scroll percentage
+    const headerBackToTop = document.getElementById('header-back-to-top');
+    const scrollPercentEl = headerBackToTop ? headerBackToTop.querySelector('.scroll-percent') : null;
+    
+    if (headerBackToTop) {
+      // Click to scroll to top
+      headerBackToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Update scroll percentage
+      function updateScrollPercent() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        if (docHeight <= 0) {
+          headerBackToTop.classList.remove('visible');
+          return;
+        }
+        
+        const percent = Math.min(100, Math.max(0, Math.round((scrollTop / docHeight) * 100)));
+        
+        if (scrollPercentEl) {
+          scrollPercentEl.textContent = percent;
+        }
+        
+        if (scrollTop <= 10) {
+          headerBackToTop.classList.remove('visible');
+        } else {
+          headerBackToTop.classList.add('visible');
+        }
+      }
+      
+      // Initial check
+      updateScrollPercent();
+      
+      // Update on scroll
+      window.addEventListener('scroll', updateScrollPercent, { passive: true });
+    }
+    
+    // Random post - 随机逛逛（桌面端和移动端）
+    function goToRandomPost() {
+      if (window.allPosts && window.allPosts.length > 0) {
+        const availablePosts = window.allPosts.filter(function(post) {
+          return post && post.link;
+        });
+        if (availablePosts.length > 0) {
+          const randomIndex = Math.floor(Math.random() * availablePosts.length);
+          const randomPost = availablePosts[randomIndex];
+          if (randomPost && randomPost.link) {
+            window.location.href = randomPost.link;
+          }
+        }
+      }
+    }
+    
+    const randomPostBtn = document.querySelector('.random-post');
+    if (randomPostBtn) {
+      randomPostBtn.addEventListener('click', goToRandomPost);
+    }
+    
+    // 移动端菜单中的随机逛逛
+    const mobileRandomPostBtn = document.querySelector('.mobile-random-post');
+    if (mobileRandomPostBtn) {
+      mobileRandomPostBtn.addEventListener('click', goToRandomPost);
+    }
+    
+    // Control panel (placeholder)
+    const controlPanelBtn = document.querySelector('.control-panel');
+    if (controlPanelBtn) {
+      controlPanelBtn.addEventListener('click', function() {
+        // 可以在这里添加中控台功能
+        console.log('Control panel clicked');
+      });
+    }
+    
+    // 移动端点击搜索时自动关闭菜单
+    const mobileSearchLinks = document.querySelectorAll('.mobile-menu a[href="#search-lightbox"]');
+    mobileSearchLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (mobileMenu) {
+          mobileMenu.classList.remove('active');
+        }
+      });
+    });
+    
+    // 搜索弹窗功能
+    const searchLightbox = document.getElementById('search-lightbox');
+    const searchBtns = document.querySelectorAll('a[href="#search-lightbox"]');
+    
+    // 打开搜索弹窗
+    searchBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (searchLightbox) {
+          searchLightbox.classList.add('search-open');
+          const searchInput = searchLightbox.querySelector('#s');
+          if (searchInput) {
+            setTimeout(function() {
+              searchInput.focus();
+            }, 100);
+          }
+        }
+      });
+    });
+    
+    // 点击背景关闭搜索弹窗
+    if (searchLightbox) {
+      searchLightbox.addEventListener('click', function(e) {
+        if (e.target === searchLightbox) {
+          searchLightbox.classList.remove('search-open');
+        }
+      });
+      
+      // ESC键关闭搜索弹窗
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchLightbox.classList.contains('search-open')) {
+          searchLightbox.classList.remove('search-open');
+        }
+      });
+      
+      // 搜索表单提交
+      const searchForm = document.getElementById('gridea-search-form');
+      if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const searchInput = searchForm.querySelector('#s');
+          if (searchInput && searchInput.value.trim()) {
+            window.location.href = '/search/index.html?q=' + encodeURIComponent(searchInput.value.trim());
+          }
+        });
+      }
+    }
+  });
+</script>
+</head>
+    <meta name="referrer" content="never">
+    <meta name="description" content="
+本页是信息页。
+
+
+
+
+关于本站
+联系本站
+站点统计
+友情链接
+开源声明
+版权协议
+*
+
+哪些文章适于本协议？
+你可以做什么？
+你需要遵守什么样的许可？
+
+署名
+禁止商用
+禁止演绎
+
+
+什么内容会被版权保护
+
+例外情况
+
+
+网站源代码协议..." />
+    <meta name="keywords" content="" />
+    <script src="https://mx.315996.xyz/media/js/waterfall.min.js"></script>
+    <script src="https://mx.315996.xyz/media/js/prism.min.js"></script>
+    <script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+  </head>
+  <body>
+            <header id="header" class="modern-header">
+        <div class="header-container">
+          <!-- 左侧：头像和名字 -->
+          <div class="header-brand">
+            <a href="https://mx.315996.xyz" class="brand-link">
+              <img src="https://mx.315996.xyz/images/avatar.png" alt="Gridea" class="brand-avatar">
+              <span class="brand-name">Gridea</span>
+            </a>
+          </div>
+
+          <!-- 中间：菜单 -->
+          <nav class="header-nav">
+            <ul class="nav-menu">
+              <li class="">
+                <a href="https://mx.315996.xyz">首页</a>
+              </li>
+              
+                <li>
+                  <a href="/archives">归档</a>
+                </li>
+              
+                <li>
+                  <a href="/tags">标签</a>
+                </li>
+              
+                <li>
+                  <a href="/friends">友链</a>
+                </li>
+              
+                <li>
+                  <a href="/post/about">关于</a>
+                </li>
+              
+            </ul>
+          </nav>
+
+          <!-- 右侧：随机文章、搜索、回到顶部 -->
+          <div class="header-actions">
+            <a href="javascript:void(0)" class="action-btn random-post" title="随机逛逛">
+              <svg class="icon-shuffle" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z"/>
+              </svg>
+            </a>
+            <a href="#search-lightbox" class="action-btn search-btn lightbox mfp-inline" title="搜索">
+              <i class="fa fa-search"></i>
+            </a>
+            <a href="javascript:void(0)" id="header-back-to-top" class="action-btn back-to-top" title="回到顶部">
+              <span class="scroll-percent">0</span>
+              <i class="fa fa-arrow-up"></i>
+            </a>
+            <!-- 移动端菜单按钮（放在header-actions内） -->
+            <div class="mobile-menu-toggle">
+              <i class="fa fa-bars"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu">
+          <ul class="mobile-nav-menu">
+            <li class="">
+              <a href="https://mx.315996.xyz">首页</a>
+            </li>
+            
+              <li>
+                <a href="/archives">归档</a>
+              </li>
+            
+              <li>
+                <a href="/tags">标签</a>
+              </li>
+            
+              <li>
+                <a href="/friends">友链</a>
+              </li>
+            
+              <li>
+                <a href="/post/about">关于</a>
+              </li>
+            
+            <li class="mobile-menu-divider"></li>
+            <li class="mobile-menu-action">
+              <a href="javascript:void(0)" class="mobile-random-post">
+                <svg class="icon-shuffle" viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="currentColor" d="M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z"/>
+                </svg>
+                <span>随机逛逛</span>
+              </a>
+            </li>
+            <li class="mobile-menu-action">
+              <a href="#search-lightbox" class="lightbox mfp-inline">
+                <i class="fa fa-search"></i>
+                <span>搜索</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- 搜索弹窗 -->
+      <div id="search-lightbox" class="mfp-hide">
+        <div class="search-modal">
+          <div class="search-modal-header">
+            <h3 class="search-modal-title">搜索文章</h3>
+          </div>
+          <div class="search-modal-body">
+            <form id="gridea-search-form" data-update="1771503393672" action="/search/index.html" class="search-form">
+              <div class="search-input-wrapper">
+                <input type="text" name="q" id="s" value="" class="search-field" placeholder="输入关键词搜索..." aria-label="输入关键词搜索..." required="">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 文章头部区域 - 纯色背景 -->
+      <div class="post-header" id="post-header">
+        <div class="post-header-content">
+          <!-- 标签 -->
+          <div class="post-header-tags">
+            
+          </div>
+          
+          <!-- 标题 -->
+          <h1 class="post-header-title">入站必读</h1>
+          
+          <!-- 元信息 -->
+          <div class="post-header-meta">
+            <span class="meta-item" title="文章字数">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h8v2H8v-2zm0 4h8v2H8v-2zm0-8h3v2H8V8z"/></svg>
+              <span id="word-count">0</span> 字
+            </span>
+            <span class="meta-item" title="阅读时间">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <span id="read-time">0</span> 分钟
+            </span>
+            <span class="meta-item" title="发布时间">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+              2023-11-28
+            </span>
+            <span class="meta-item" title="本页阅读量">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              <span id="busuanzi_value_page_pv">0</span> 次
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text" id="post-content-text">
+                  <blockquote>
+<p>本页是信息页。</p>
+</blockquote>
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">关于本站</a></li>
+<li><a href="#%E8%81%94%E7%B3%BB%E6%9C%AC%E7%AB%99">联系本站</a></li>
+<li><a href="#%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1">站点统计</a></li>
+<li><a href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a></li>
+<li><a href="#%E5%BC%80%E6%BA%90%E5%A3%B0%E6%98%8E">开源声明</a></li>
+<li><a href="#%E7%89%88%E6%9D%83%E5%8D%8F%E8%AE%AE">版权协议</a><br>
+*
+<ul>
+<li><a href="#%E5%93%AA%E4%BA%9B%E6%96%87%E7%AB%A0%E9%80%82%E4%BA%8E%E6%9C%AC%E5%8D%8F%E8%AE%AE">哪些文章适于本协议？</a></li>
+<li><a href="#%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88">你可以做什么？</a></li>
+<li><a href="#%E4%BD%A0%E9%9C%80%E8%A6%81%E9%81%B5%E5%AE%88%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E8%AE%B8%E5%8F%AF">你需要遵守什么样的许可？</a>
+<ul>
+<li><a href="#%E7%BD%B2%E5%90%8D">署名</a></li>
+<li><a href="#%E7%A6%81%E6%AD%A2%E5%95%86%E7%94%A8">禁止商用</a></li>
+<li><a href="#%E7%A6%81%E6%AD%A2%E6%BC%94%E7%BB%8E">禁止演绎</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%80%E4%B9%88%E5%86%85%E5%AE%B9%E4%BC%9A%E8%A2%AB%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4">什么内容会被版权保护</a>
+<ul>
+<li><a href="#%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5">例外情况</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BD%91%E7%AB%99%E6%BA%90%E4%BB%A3%E7%A0%81%E5%8D%8F%E8%AE%AE">网站源代码协议</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E">免责声明</a></li>
+<li><a href="#%E6%AF%9B%E7%BA%BF%E7%99%BE%E7%A7%91%E6%8A%95%E8%AF%89%E4%B8%8E%E4%B8%BE%E6%8A%A5%E5%A4%84%E7%90%86%E6%9D%A1%E4%BE%8B">毛线百科投诉与举报处理条例</a></li>
+<li><a href="#%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8C">格式手册</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9C%A8%E7%BA%BF-markdown-%E7%BC%96%E8%BE%91%E5%99%A8">在线 MarkDown 编辑器</a>
+<ul>
+<li><a href="#markdown-%E6%95%88%E6%9E%9C%E5%8F%8A%E6%A0%BC%E5%BC%8F%E7%A4%BA%E4%BE%8B">MarkDown 效果及格式示例</a></li>
+</ul>
+</li>
+<li><a href="#heading-1">Heading 1</a>
+<ul>
+<li><a href="#heading-2">Heading 2</a>
+<ul>
+<li><a href="#heading-3">Heading 3</a>
+<ul>
+<li><a href="#heading-4">Heading 4</a>
+<ul>
+<li><a href="#heading-5">Heading 5</a>
+<ul>
+<li><a href="#heading-6">Heading 6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#heading-1-link-heading-link">Heading 1 link Heading link</a>
+<ul>
+<li><a href="#heading-2-link-heading-link">Heading 2 link Heading link</a>
+<ul>
+<li><a href="#heading-3-link-heading-link">Heading 3 link Heading link</a>
+<ul>
+<li><a href="#heading-4-link-heading-link-heading-link-heading-link">Heading 4 link Heading link Heading link Heading link</a>
+<ul>
+<li><a href="#heading-5-link-heading-link">Heading 5 link Heading link</a>
+<ul>
+<li><a href="#heading-6-link-heading-link">Heading 6 link Heading link</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E6%A0%87%E9%A2%98%E7%94%A8%E5%BA%95%E7%BA%BF%E7%9A%84%E5%BD%A2%E5%BC%8Fheading-underline">标题（用底线的形式）Heading (underline)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#this-is-an-h1">This is an H1</a>
+<ul>
+<li><a href="#this-is-an-h2">This is an H2</a>
+<ul>
+<li><a href="#%E5%AD%97%E7%AC%A6%E6%95%88%E6%9E%9C%E5%92%8C%E6%A8%AA%E7%BA%BF%E7%AD%89">字符效果和横线等</a></li>
+<li><a href="#%E5%BC%95%E7%94%A8-blockquotes">引用 Blockquotes</a></li>
+<li><a href="#%E9%94%9A%E7%82%B9%E4%B8%8E%E9%93%BE%E6%8E%A5-links">锚点与链接 Links</a></li>
+<li><a href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE-codes">多语言代码高亮 Codes</a>
+<ul>
+<li><a href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81-inline-code">行内代码 Inline code</a></li>
+<li><a href="#%E7%BC%A9%E8%BF%9B%E9%A3%8E%E6%A0%BC">缩进风格</a></li>
+<li><a href="#js%E4%BB%A3%E7%A0%81">JS代码</a></li>
+<li><a href="#html-%E4%BB%A3%E7%A0%81-html-codes">HTML 代码 HTML codes</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%BE%E7%89%87-images">图片 Images</a></li>
+<li><a href="#%E5%88%97%E8%A1%A8-lists">列表 Lists</a>
+<ul>
+<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E5%87%8F%E5%8F%B7unordered-lists-">无序列表（减号）Unordered Lists (-)</a></li>
+<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E6%98%9F%E5%8F%B7unordered-lists">无序列表（星号）Unordered Lists (*)</a></li>
+<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E5%8A%A0%E5%8F%B7%E5%92%8C%E5%B5%8C%E5%A5%97unordered-lists">无序列表（加号和嵌套）Unordered Lists (+)</a></li>
+<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-ordered-lists-">有序列表 Ordered Lists (-)</a></li>
+<li><a href="#gfm-task-list">GFM task list</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%98%E5%88%B6%E8%A1%A8%E6%A0%BC-tables">绘制表格 Tables</a>
+<ul>
+<li><a href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7-html-entities-codes">特殊符号 HTML Entities Codes</a></li>
+<li><a href="#%E5%8F%8D%E6%96%9C%E6%9D%A0-escape">反斜杠 Escape</a></li>
+</ul>
+</li>
+<li><a href="#%E7%A7%91%E5%AD%A6%E5%85%AC%E5%BC%8F-texkatex">科学公式 TeX(KaTeX)</a></li>
+<li><a href="#%E5%88%86%E9%A1%B5%E7%AC%A6-page-break">分页符 Page break</a></li>
+<li><a href="#%E7%BB%98%E5%88%B6%E6%B5%81%E7%A8%8B%E5%9B%BE-flowchart">绘制流程图 Flowchart</a></li>
+<li><a href="#%E7%BB%98%E5%88%B6%E5%BA%8F%E5%88%97%E5%9B%BE-sequence-diagram">绘制序列图 Sequence Diagram</a></li>
+<li><a href="#end">End</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="关于本站">关于本站</h2>
+<p>毛线百科是一项由志愿者合作编纂，旨在创造一部版权开放、质量优良、内容丰富的在线百科全书，推广“开放版权”“自由及开源软件”等理念，鼓励并推动知识、信息、数据及文化、艺术、科学等领域内容的创造、传播、利用。<br>
+2025，毛线百科wiki环境正式启动，初始维护者队伍仅有2位理事员，2023-03-31，毛线百科开启Alpha测试，截止目前，毛线百科已经拥有共计924（？？？）位用户，超过1,505个主要条目。<br>
+毛线百科因时而变，注重协作。所有人随时都可以注册账号，参与毛线百科的编纂工作，增修条目中的文字、参考文献、图片、音视频等内容。符合毛线百科方针的内容，可以保留在毛线百科内。并坚持核心建立在拥有丰富维基经验的管理团队为百科最终解释与决策节点，引导毛线百科向良性、健康的爱好者Wiki发展。<br>
+毛线百科将始终如一的维护所有作品的合法版权，对任何盗版、盗搬、盗用行为坚决拒绝。<br>
+除另有声明的部分外，本网站的文字内容采用CC BY-SA 4.0授权，且可能适用附加条款；详见本网站的著作权信息。<br>
+毛线百科原创文字、图形、图文组合，均是本网站运营者或其关联实体的标志或注册标志。</p>
+<h2 id="联系本站">联系本站</h2>
+<p>有关合作请求、媒体咨询、投诉举报等问题，您可联系毛线百科运营方：<a href="mailto:zynth0@163.com">zynth0@163.com</a><br>
+若涉及知识产权投诉，在向前述地址发送邮件的同时，请抄送：<a href="mailto:hh@huanhuan.cyou">hh@huanhuan.cyou</a><br>
+举报违法不良信息：<a href="mailto:zyhth0@foxmail.com">zyhth@foxmail.com</a><br>
+社区交流群：<a href="https://qm.qq.com/q/b0IVIcxPwY">QQ群号1075408950</a><br>
+免责声明：前述各邮件列表由志愿者维护，不保证邮件回复时效；毛线百科理事团队不等同于责任运营，请避免透露敏感个人信息，不要在邮件里透露与咨询内容无关的个人信息。<br>
+凡以@volunteers.315996.xyz结尾的邮箱，均由毛线百科志愿者查看，此类邮箱的处理速度通常较快。</p>
+<h2 id="站点统计">站点统计</h2>
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+<p>今日总访问量 <span id="busuanzi_today_pv">加载中...</span> 次<br>
+今日总访客数 <span id="busuanzi_today_uv">加载中...</span> 人<br>
+本站总访问量 <span id="busuanzi_site_pv">加载中...</span> 次<br>
+本站总访客数 <span id="busuanzi_site_uv">加载中...</span> 人<br>
+本页总阅读量 <span id="busuanzi_page_pv">加载中...</span> 次<br>
+本页总访客数 <span id="busuanzi_page_uv">加载中...</span> 人</p>
+<h2 id="友情链接">友情链接</h2>
+<p><a href="https://www.wikipedia.org/">維基百科</a><br>
+<a href="https://blog.zeora.top">Zeorah`blog</a><br>
+<a href="https://baike.baidu.com/">百度百科</a><br>
+<a href="https://www.qiuwenbaike.cn/">求闻百科</a><br>
+<a href="https://ysymh.cc/">有兽档案馆</a><br>
+<a href="https://www.zgbk.com/">中国百科网</a><br>
+<a href="https://baike.weixin.qq.com/">QQ百科</a><br>
+<a href="https://zhheo.com">张洪Heo</a><br>
+<a href="https://xn--vqqq8jxym.com">何意味.com</a></p>
+<h2 id="开源声明">开源声明</h2>
+<p>MX-Wiki<br>
+<a href="https://github.com/hellold9/MX-Wiki">毛线百科前端仓库</a><br>
+<a href="https://github.com/grideadea/gridea">GRIDEA仓库</a></p>
+<h2 id="版权协议">版权协议</h2>
+<p>为了保持文章质量，并保持互联网的开放共享精神，保持页面流量的稳定，综合考虑下本站的所有原创文章均采用<strong>cc协议</strong>中比较严格的<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">署名-非商业性使用-禁止演绎 4.0 国际</a>标准。这篇文章主要想能够更加清楚明白的介绍本站的协议标准和要求。方便你合理的使用本站的文章。<br>
+本站无广告嵌入和商业行为。违反协议的行为不仅会损害原作者的创作热情，而且会影响整个版权环境。强烈呼吁你能够在转载时遵守协议。遵守协议的行为几乎不会对你的目标产生负面影响，鼓励创作环境是每个创作者的期望。</p>
+<h4 id="哪些文章适于本协议">哪些文章适于本协议？</h4>
+<p>所有<strong>原创内容</strong>均在文章标题顶部，以及文章结尾的版权说明部分展示。<br>
+原创内容的<strong>非商用转载</strong>必须为完整转载且标注出处的 <code>带有完整url链接</code>或 <code>访问原文</code>之类字样的<strong>超链接</strong>。<br>
+作为参考资料的情况可以无需完整转载，摘录所需要的部分内容即可，但需标注出处。</p>
+<h4 id="你可以做什么">你可以做什么？</h4>
+<p>只要你遵守本页的许可，你可以自由地共享文章的内容 — 在任何媒介以任何形式复制、发行本作品。并且无需通知作者。</p>
+<h4 id="你需要遵守什么样的许可">你需要遵守什么样的许可？</h4>
+<h5 id="署名">署名</h5>
+<p>你必须标注内容的来源，你需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接提升阅读体验）。</p>
+<h5 id="禁止商用">禁止商用</h5>
+<p>本站内容免费向互联网所有用户提供，分享本站文章时禁止商业性使用、禁止在转载页面中插入广告（例如谷歌广告、百度广告）、禁止阅读的拦截行为（例如关注公众号、下载App后观看文章）。</p>
+<h5 id="禁止演绎">禁止演绎</h5>
+<p>作为参考资料截取部分内容<br>
+作为参考资料的情况可以无需完整转载，摘录所需要的部分内容即可，但需标注出处。</p>
+<ul>
+<li>分享全部内容（无修改）<br>
+你需要在文章开头部分（或者明显位置）标注原文章链接（建议使用超链接）</li>
+<li>分享部分截取内容或者<strong>衍生创作</strong><br>
+目前本站全部原创文章的<strong>衍生品</strong>禁止公开分享和分发。如有更好的修改建议，可以在对应文章下留言。如有衍生创作需求，可以在评论中联系。</li>
+</ul>
+<h4 id="什么内容会被版权保护">什么内容会被版权保护</h4>
+<p>包括但不限于：</p>
+<ul>
+<li>文章封面图片</li>
+<li>文章标题和正文</li>
+</ul>
+<h5 id="例外情况">例外情况</h5>
+<p>本着友好互相进步的原则，被本站<strong>友链</strong>收录的博客允许博客文章内容的衍生品的分享和分发，但仍需标注出处。<br>
+本着互联网开放精神，你可以在博客文章下方留言要求授权博文的衍生品的分享和分发，标注你的网站地址。<br>
+禁止多篇文章的批量转载。本站文章仅在本站和<strong>欢欢手账</strong>微信公众号上发布和投稿，不会在其他站点投稿。</p>
+<h4 id="网站源代码协议">网站源代码协议</h4>
+<p>网站源代码（仅包含css、js）的代码部分采用<strong>GPL协议</strong>。<br>
+版权协议最新更新时间：2025年7月22日</p>
+<h2 id="免责声明">免责声明</h2>
+<p>有兽档案馆运营主体，包括责任运营、档案理事团队，与北京分子互动文化传播有限公司及其下属包括但不限于非人哉工作室等主体无任何联系，有兽档案馆责任运营保留对网站内容的最终解释权。<br>
+有兽档案馆内出现的类似“有兽焉®”、“有兽焉”Logo、分子互动“FENZ”Logo、“非人哉®”等，是分子互动的注册商标，其权利归北京分子互动文化传播有限公司（FENZ, Inc.）所有，其他商标如在本站内展现，商标权利的归其权利人所有。<br>
+我们旨在为具有百科意义的内容提供托管服务；但是，我们无法保证本网站内容的真实性、准确性、可靠性、完善性。<br>
+本网站所有设定都不具有现实可比性，任何将本wiki中设定与现实对比的行为都是无趣以及无用的。<br>
+任何出现的“科学术语”、“公式”、“定律”等都不保证具有科学性，任何出现的国家、地区、地理设定亦不影射任何现实存在。<br>
+由于wiki采取自由编辑政策，本百科的运营方不对贡献者提交的材料的正确性以及公正性负有责任，对其合法性概不负责，亦不承担任何法律责任。<br>
+贡献者提交内容或许并不具有中立性，但这并不代表本站运营方及其他贡献者赞成或反对某种态度、观点。任何人都可以修改条目，使之满足其赞同的“正确” 和/或 “公正”。<br>
+本网站或任何相关方，不建议任何人违反法律、法规等强制性规定行事，且对您可能做出的任何违法行为不负任何责任<br>
+以下情形造成的使用者损失，本网站免责：<br>
+一切因贡献者提交内容造成的意外、诽谤、数据破坏、著作权或知识产权侵犯；<br>
+因用户上传具有著作权保护的作品，未发出通知而导致的著作权或知识产权侵犯、损失，或已发出通知且本站已及时处理但仍产生的著作权或知识产权侵犯、损失；<br>
+因非本站运营方可通过合理措施避免的原因导致的用户个人信息泄露、丢失、被盗用或被窜改等；<br>
+因非本站运营方可通过合理措施避免的原因导致的无法访问及因此给用户造成的一切损失；<br>
+由于用户将个人密码告知他人或与他人共享注册账号，由此导致的任何个人资料泄露或其他损失；<br>
+由于用户违反本站点条例而导致账号被禁用或删除；<br>
+其他非可合理归责于本网站的损失。<br>
+用户应当对使用本百科所带来的潜在风险有所了解，本百科不承担任何与用户自身相关的相应责任与风险。<br>
+您应当理解本站是一个开放的数据库，故任何声称自己是本站“编辑”或负责人的个人（以下简称“非官方人员”）——除非其持有本站运营方书面签发并加盖公章的合法身份证明（包括工作人员证明、符合代理范围的代理书等）——皆非运营方官方人员，其发言不代表运营方立场。您因相信“非官方人员”的发言造成的下列损失，本网站免责：<br>
+您因企图通过向“非官方人员”付费方式要求更改本站一项或多项内容导致被骗的损失；<br>
+您因向“非官方人员”支付包括但不限于薪水、佣金、差旅费、稿费、著作权转让费等各类费用导致被骗的损失；<br>
+其他非可合理归责于本网站的损失。<br>
+您应当理解即便是本百科档案理事员、管理员、巡查员等有特定权限的用户，其发表的个人言论亦不代表本百科运营方政策。本站的绝大部分数据皆为公开，可由公众任意访问。当某人向您展示本站相关数据，并不能证明此人为运营方授权官方人员。<br>
+本百科的全体参与者及其运营方遵守中华人民共和国相关法律和规定，对配合相关部门合法执法行动而给用户<br>
+带来的损失本站不负责任。</p>
+<h2 id="毛线百科投诉与举报处理条例">毛线百科投诉与举报处理条例</h2>
+<p>毛线百科（下称“本网站”）由个体ICP备案方、个体公安备案方“两位一体”(好似没有)（下文中合称“责任运营”）责任运营，由有兽档案馆理事团队实际运营并管理（下文合称“我们”或“运营者”），通过其网站及现在或未来可能不时提供的其他计算机软件、应用程序、网站或其他类似产品或服务向用户提供的互联网信息服务。我们通过自身服务器空间，为网站用户在信息网络传播其所提供的信息提供便利。</p>
+<p>为维护清朗网络空间，有效处理侵权及违法内容，根据中华人民共和国（不含香港特别行政区、澳门特别行政区、台湾地区）法律、法规、规章、司法解释及其他强制性规定（下称“中国法律”），并根据《有兽档案馆用户协议》中有关“补充条例”的条款，制定《有兽档案馆投诉与举报处理条例》（下称“本条例”）。<br>
+一、侵权投诉<br>
+（一）通过社区提出非正式投诉<br>
+本网站由参与者自发组成社区。您可以选择通过参与者社区解决相关内容的著作权、肖像权侵权问题。权利人或其代理人可以个人名义注册本网站账号，根据社区页面的指引提出公开请求。收到通知的用户如果认为被投诉的相关内容或链接不侵犯投诉人的著作权，可以在社区指定的页面进行申诉。此外，权利人或其代理人也可以向社区档案理事团队提出处理著作权侵权的请求。</p>
+<p>如欲向社区发送非公开的侵权投诉，请发邮件到zorua@vip.qq.com，直接联系本网站责任运营。如果责任运营认为邮件内容不涉及个人信息，也不明确属于需要直接联系责任运营的情况，责任运营可能会将邮件发给档案理事团队进行解答。</p>
+<p>本网站运营者不为本章节所列投诉程序的时效性、合法性做任何背书或承担任何责任。</p>
+<p>（二）向运营者提出正式投诉<br>
+根据《中华人民共和国民法典》和《信息网络传播权保护条例》的规定，我们制定了权利人书面通知程序及网站用户书面说明程序。权利人书面通知程序供权利人要求撤下侵犯其民事权利之作品、表演或录音录像制品或其链接（下称“相关侵权内容或链接”），网站用户书面说明程序供网站用户要求恢复其所提供的相关侵权内容或链接。</p>
+<ol>
+<li>权利人书面通知程序（投诉通知）<br>
+如果相关权利人认为本网站上存在相关侵权内容或链接，可向我们发出书面通知（“投诉通知”），要求本网站删除或断开相关侵权内容或链接。</li>
+</ol>
+<p>发出投诉通知者（“投诉人”）应在投诉通知中向我们提供下列各项内容：</p>
+<p>（一）权利人的真实身份信息，包括姓名（名称）、联系方式和地址；如为权利人的代理人，应提供有权代理的证明；</p>
+<p>（二）要求删除或者断开链接的侵权作品、表演、录音录像制品的名称和网络地址；</p>
+<p>（三）证明相关内容构成侵权的初步证明材料；</p>
+<p>（四）对投诉内容真实性、行使投诉权利不损害公共利益的承诺书（格式应参见附件《投诉人承诺书》）；</p>
+<p>（五）权利人或其代理人的有效身份证明与联系方式。</p>
+<ol start="2">
+<li>网站用户书面说明程序（反通知）<br>
+如果收到投诉通知者认为被投诉的相关内容或链接不侵犯投诉人的民事权利，可向本网站发出书面说明（下称“反通知书”），要求恢复相关内容或链接。</li>
+</ol>
+<p>发出反通知书者（“反通知人”）应在反通知书中向我们提供下列各项信息：</p>
+<p>（一）反通知人的真实身份信息，包括姓名（名称）、联系方式和地址；如为反通知人的代理人，应提供有权代理的证明；</p>
+<p>（二）要求恢复的作品、表演、录音录像制品的名称和网络地址；</p>
+<p>（三）证明相关内容不构成侵权的初步证明材料；</p>
+<p>（四）对通知内容真实性、投诉所涉内容符合法律的承诺书（格式应参见附件《反通知人承诺书》）；</p>
+<p>（五）反通知人或其代理人的有效身份证明与联系方式。</p>
+<ol start="3">
+<li>运营者如何处理投诉通知及反通知<br>
+我们收到投诉或举报并审核确认后，将尽快删除相关内容或链接。我们会将投诉通知的内容转送给相关侵权内容或链接的提供者。</li>
+</ol>
+<p>收到投诉通知者可能会向本网站发出反通知书，要求恢复被删除的相关内容或链接。当我们收到相关反通知并审核确认后，将可能恢复被删除的相关内容或链接，相关反通知书将由我们转送予投诉人。</p>
+<p>本网站特别提请投诉人注意：</p>
+<p>（一）您所发送的投诉通知，其主要内容将在我们主办的网站上公开。</p>
+<p>（二）根据《中华人民共和国民法典》及《信息网络传播权保护条例》规定，投诉人收到反通知后，不应再就同一相关内容或链接再次向我们提出投诉。您可以向相关政府部门提出投诉并向本网站发出通知，或者向法院提出诉讼。如果投诉人收到我们转送的反通知后，未在二十个工作日内向行政主管部门向本网站发出已提出投诉或已提起诉讼通知的，我们将恢复相关内容。</p>
+<p>（三）对于一般的著作权、肖像权等问题，我们建议您可以先联系社区志愿者咨询。一般来说，志愿者的回复速度会快过本网站官方人员，志愿者也能帮您找到更适合您的解决方式；本网站遇到的大多数侵权问题不需要直接联系社区档案理事团队或运营方。</p>
+<p>二、违法内容处理<br>
+根据国家互联网信息办公室《网络信息内容生态治理规定》，我们制定了违法内容处理程序，用于用户提交明显不良、违法、色情、反动、涉密等信息举报及针对举报的申诉。获受理的此类举报细节不会公开。</p>
+<p>（一）举报途径<br>
+您可以直接发送邮件给zorua@vip.qq.com递交举报。</p>
+<p>若您的投诉举报内容不涉及个人隐私、未成年人权益等应由有兽档案馆责任运营处理的内容，也可以发送至yslib@youshou.wiki，由有兽档案馆社区处理。</p>
+<p>（二）举报申诉<br>
+若遭到举报移除的内容与您相关，您应当通过本条例“联系方式”部分所列的方式提交申诉。在申诉内容中，您需要指明为何相关内容不应被移除。</p>
+<p>（三）我们如何处理举报及申诉<br>
+责任运营或档案理事团队收到投诉或举报并审核确认后，将尽快删除相关内容或链接。一般来说，档案理事团队的处理速度会快过本网站责任运营。</p>
+<p>与移除内容相关者可以向本网站运营者发出申诉，要求恢复被删除的相关内容或链接。当运营者收到相关反通知并审核确认后，将可能恢复被删除的相关内容或链接。</p>
+<p>三、注意事项<br>
+请注意，根据本条例发出投诉、反通知、举报、申诉时，即代表您已经知情同意以下事项：</p>
+<p>（一）投诉人、反通知人、举报人、申诉人（下合称“行为人”）应确保自己的行为符合中国法律，符合社会公序良俗。</p>
+<p>本网站特别提请各行为人注意：因投诉或举报导致本网站错误删除、断开相关内容或链接，对网站用户或本网站造成损失的，投诉人、举报人应当承担民事责任；因反通知书导致本网站错误恢复相关内容或链接，对权利人或本网站造成损失的，反通知人应当就此承担民事责任。</p>
+<p>（二）我们承诺：各行为人所提供的个人隐私信息及其他个人信息将严格保密。</p>
+<p>对于侵权投诉通知、反通知，为履行法律义务必须传送投诉通知书、反通知书信息时，我们将对其中的个人隐私及敏感个人信息予以匿名化处理。</p>
+<p>（三）若所提供的初步证明材料不足以证明相关事实，投诉、反通知、举报、申诉的内容违反中国法律，或者执行该等投诉、反通知、举报、申诉之要求将严重损害公共利益，我们保留部分或全部拒绝该等要求的权利。</p>
+<p>（四）本条例的生效、实施、解释、修订及争议解决等各事项，均适用于中国法律；我们执行本条例的所有行为，均适用中国法律；本条例若存在与中国法律法规抵触之处，相关部分被行政机关或法院宣布无效的，不影响本条例其余部分的效力。</p>
+<p>参与本条例所列程序，即意味着相关纠纷将受中国法律约束。如果相关纠纷经协商、调解或行政投诉无法解决的，应由山西省太原市杏花岭区有管辖权的人民法院管辖。</p>
+<p>四、联系方式<br>
+除本页“简易程序”和“违法内容处理”两段所涉及的情况外的其他投诉举报，您可以通过电子邮件hh@huanhuan.cyou通知本网站责任运营。</p>
+<p>附件<br>
+（一）投诉人承诺书<br>
+投诉人及其代理人在此承诺：</p>
+<p>投诉人确认相关作品内容或链接侵犯本人民事权利，投诉行为符合中华人民共和国（不含香港特别行政区、澳门特别行政区、台湾地区）法律规定，符合社会公序良俗，投诉通知中所有内容均真实、完整、合法、有效。</p>
+<p>如果本投诉通知存在任何不完整、不实、不合法或不符合社会公序良俗之处，投诉人将承担由此产生的一切法律责任；因投诉通知导致本网站错误删除或断开相关内容或链接，对网站用户或本网站造成损失的，投诉人将承担由此产生的一切法律责任。</p>
+<p>承诺人：（签字或盖章）<br>
+××××年××月××日<br>
+（二）反通知人承诺书<br>
+反通知人及其代理人在此承诺：</p>
+<p>反通知人确认被投诉的相关内容或链接不侵犯投诉人的民事权利，反通知行为符合中华人民共和国（不含香港特别行政区、澳门特别行政区、台湾地区）法律规定，符合社会公序良俗，反通知书中所有内容均真实、完整、合法、有效。</p>
+<p>如果本反通知书存在任何不完整、不实、不合法或不符合社会公序良俗之处，反通知人将承担由此产生的一切法律责任；因反通知书导致本网站错误恢复相关内容或链接，对合法权利人或本网站造成损失的，反通知人将承担由此产生的一切法律责任。</p>
+<p>承诺人：（签字或盖章）<br>
+××××年××月××日</p>
+<h2 id="格式手册">格式手册</h2>
+<h1 id="在线-markdown-编辑器">在线 MarkDown 编辑器</h1>
+<figure data-type="image" tabindex="1"><img src="https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png" alt="" loading="lazy"></figure>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<p>Markdown 编写的文档后缀为 <code>.md</code> 或 <code>.markdown</code>。</p>
+<h2 id="markdown-效果及格式示例">MarkDown 效果及格式示例</h2>
+<p><strong>目录 (Table of Contents)</strong></p>
+<p>[TOCM]</p>
+<p>[TOC]</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<h1 id="heading-1-link-heading-link">Heading 1 link <a href="https://github.com/pandao/editor.md" title="Heading link">Heading link</a></h1>
+<h2 id="heading-2-link-heading-link">Heading 2 link <a href="https://github.com/pandao/editor.md" title="Heading link">Heading link</a></h2>
+<h3 id="heading-3-link-heading-link">Heading 3 link <a href="https://github.com/pandao/editor.md" title="Heading link">Heading link</a></h3>
+<h4 id="heading-4-link-heading-link-heading-link-heading-link">Heading 4 link <a href="https://github.com/pandao/editor.md" title="Heading link">Heading link</a> Heading link <a href="https://github.com/pandao/editor.md" title="Heading link">Heading link</a></h4>
+<h5 id="heading-5-link-heading-link">Heading 5 link <a href="https://github.com/pandao/editor.md" title="Heading link">Heading link</a></h5>
+<h6 id="heading-6-link-heading-link">Heading 6 link <a href="https://github.com/pandao/editor.md" title="Heading link">Heading link</a></h6>
+<h4 id="标题用底线的形式heading-underline">标题（用底线的形式）Heading (underline)</h4>
+<h1 id="this-is-an-h1">This is an H1</h1>
+<h2 id="this-is-an-h2">This is an H2</h2>
+<h3 id="字符效果和横线等">字符效果和横线等</h3>
+<hr>
+<p><s>删除线</s> <s>删除线（开启识别HTML标签时）</s><br>
+<em>斜体字</em>      <em>斜体字</em><br>
+<strong>粗体</strong>  <strong>粗体</strong><br>
+<em><strong>粗斜体</strong></em> <em><strong>粗斜体</strong></em></p>
+<p>上标：X<sub>2</sub>，下标：O<sup>2</sup></p>
+<p><strong>缩写(同HTML的abbr标签)</strong></p>
+<blockquote>
+<p>即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启</p>
+</blockquote>
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<h3 id="引用-blockquotes">引用 Blockquotes</h3>
+<blockquote>
+<p>引用文本 Blockquotes</p>
+</blockquote>
+<p>引用的行内混合 Blockquotes</p>
+<blockquote>
+<p>引用：如果想要插入空白换行<code>即&lt;br /&gt;标签</code>，在插入处先键入两个以上的空格然后回车即可，<a href="http://localhost/">普通链接</a>。</p>
+</blockquote>
+<h3 id="锚点与链接-links">锚点与链接 Links</h3>
+<p><a href="http://localhost/">普通链接</a></p>
+<p><a href="http://localhost/" title="普通链接带标题">普通链接带标题</a></p>
+<p>直接链接：&lt;https: //github.com&gt;</p>
+<p><a href="http://www.this-anchor-link.com/">锚点链接</a></p>
+<p><a href="mailto:test.test@gmail.com">mailto:test.test@gmail.com</a></p>
+<p>GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com</p>
+<blockquote>
+<p>@pandao</p>
+</blockquote>
+<h3 id="多语言代码高亮-codes">多语言代码高亮 Codes</h3>
+<h4 id="行内代码-inline-code">行内代码 Inline code</h4>
+<p>执行命令：<code>npm install marked</code></p>
+<h4 id="缩进风格">缩进风格</h4>
+<p>即缩进四个空格，也做为实现类似 <code>&lt;pre&gt;</code> 预格式化文本 ( Preformatted Text ) 的功能。</p>
+<pre><code>&lt;?php
+    echo &quot;Hello world!&quot;;
+?&gt;
+</code></pre>
+<p>预格式化文本：</p>
+<pre><code>| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+</code></pre>
+<h4 id="js代码">JS代码</h4>
+<pre><code class="language-javascript">function test() {
+    console.log(&quot;Hello world!&quot;);
+}
+
+(function(){
+    var box = function() {
+        return box.fn.init();
+    };
+
+    box.prototype = box.fn = {
+        init : function(){
+            console.log('box.init()');
+
+            return this;
+        },
+
+        add : function(str) {
+            alert(&quot;add&quot;, str);
+
+            return this;
+        },
+
+        remove : function(str) {
+            alert(&quot;remove&quot;, str);
+
+            return this;
+        }
+    };
+
+    box.fn.init.prototype = box.fn;
+
+    window.box =box;
+})();
+
+var testBox = box();
+testBox.add(&quot;jQuery&quot;).remove(&quot;jQuery&quot;);
+</code></pre>
+<h4 id="html-代码-html-codes">HTML 代码 HTML codes</h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;mate charest=&quot;utf-8&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;Editor.md, Markdown, Editor&quot; /&gt;
+&lt;title&gt;Hello world!&lt;/title&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    body {
+        font-size: 14px;
+        color: #444;
+        font-family: &quot;Microsoft Yahei&quot;, Tahoma, &quot;Hiragino Sans GB&quot;, Arial;
+        background: #fff;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    img {
+        border: none;
+        vertical-align: middle;
+    }
+&lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+&lt;h1 class=&quot;text-xxl&quot;&gt;Hello world!&lt;/h1&gt;
+&lt;p class=&quot;text-green&quot;&gt;Plain text&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="图片-images">图片 Images</h3>
+<p>Image:</p>
+<figure data-type="image" tabindex="2"><img src="https://pandao.github.io/editor.md/examples/images/4.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>Follow your heart.</p>
+</blockquote>
+<figure data-type="image" tabindex="3"><img src="https://pandao.github.io/editor.md/examples/images/8.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>图为：厦门白城沙滩</p>
+</blockquote>
+<p>图片加链接 (Image + Link)：</p>
+<figure data-type="image" tabindex="4"><a href="https://pandao.github.io/editor.md/images/7.jpg" title="李健首张专辑《似水流年》封面"><img src="https://pandao.github.io/editor.md/examples/images/7.jpg" alt="" loading="lazy"></a></figure>
+<blockquote>
+<p>图为：李健首张专辑《似水流年》封面</p>
+</blockquote>
+<hr>
+<h3 id="列表-lists">列表 Lists</h3>
+<h4 id="无序列表减号unordered-lists-">无序列表（减号）Unordered Lists (-)</h4>
+<ul>
+<li>列表一</li>
+<li>列表二</li>
+<li>列表三</li>
+</ul>
+<h4 id="无序列表星号unordered-lists">无序列表（星号）Unordered Lists (*)</h4>
+<ul>
+<li>列表一</li>
+<li>列表二</li>
+<li>列表三</li>
+</ul>
+<h4 id="无序列表加号和嵌套unordered-lists">无序列表（加号和嵌套）Unordered Lists (+)</h4>
+<ul>
+<li>列表一</li>
+<li>列表二
+<ul>
+<li>列表二-1</li>
+<li>列表二-2</li>
+<li>列表二-3</li>
+</ul>
+</li>
+<li>列表三
+<ul>
+<li>列表一</li>
+<li>列表二</li>
+<li>列表三</li>
+</ul>
+</li>
+</ul>
+<h4 id="有序列表-ordered-lists-">有序列表 Ordered Lists (-)</h4>
+<ol>
+<li>第一行</li>
+<li>第二行</li>
+<li>第三行</li>
+</ol>
+<h4 id="gfm-task-list">GFM task list</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4793582"><label class="task-list-item-label" for="task-item-4793582"> GFM task list 1</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3660884"><label class="task-list-item-label" for="task-item-3660884"> GFM task list 2</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8905116"><label class="task-list-item-label" for="task-item-8905116"> GFM task list 3</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9711900"><label class="task-list-item-label" for="task-item-9711900"> GFM task list 3-1</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5346741"><label class="task-list-item-label" for="task-item-5346741"> GFM task list 3-2</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3899480"><label class="task-list-item-label" for="task-item-3899480"> GFM task list 3-3</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5320510"><label class="task-list-item-label" for="task-item-5320510"> GFM task list 4</label>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2900964"><label class="task-list-item-label" for="task-item-2900964"> GFM task list 4-1</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5732945"><label class="task-list-item-label" for="task-item-5732945"> GFM task list 4-2</label></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="绘制表格-tables">绘制表格 Tables</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>计算机</td>
+<td style="text-align:right">$1600</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td>手机</td>
+<td style="text-align:right">$12</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td>管线</td>
+<td style="text-align:right">$1</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>help()</code></td>
+<td>Display the help window.</td>
+</tr>
+<tr>
+<td><code>destroy()</code></td>
+<td><strong>Destroy your computer!</strong></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Left-Aligned</th>
+<th style="text-align:center">Center Aligned</th>
+<th style="text-align:right">Right Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">col 3 is</td>
+<td style="text-align:center">some wordy text</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td style="text-align:left">col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td style="text-align:left">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computer</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="特殊符号-html-entities-codes">特殊符号 HTML Entities Codes</h4>
+<p>© &amp;  ¨ ™ ¡ £<br>
+&amp; &lt; &gt; ¥ € ® ± ¶ § ¦ ¯ « ·</p>
+<p>X² Y³ ¾ ¼  ×  ÷   »</p>
+<p>18ºC  &quot;  '</p>
+<p>[========]</p>
+<h4 id="反斜杠-escape">反斜杠 Escape</h4>
+<p>*literal asterisks*</p>
+<p>[========]</p>
+<h3 id="科学公式-texkatex">科学公式 TeX(KaTeX)</h3>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E=mc^2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8641079999999999em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>行内的公式$$E=mc<sup>2$$行内的公式，行内的$$E=mc</sup>2$$公式。</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>&gt;</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x &gt; y
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span></span></p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: Can&#039;t use function &#039;\(&#039; in math mode at position 1: \̲(̲\sqrt{3x-1}+(1+…'>\(\sqrt{3x-1}+(1+x)^2\)
+</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>sin</mi><mo>⁡</mo><mo>(</mo><mi>α</mi><msup><mo>)</mo><mi>θ</mi></msup><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mo>(</mo><msup><mi>x</mi><mi>i</mi></msup><mo>+</mo><mi>cos</mi><mo>⁡</mo><mo>(</mo><mi>f</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.149108em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">θ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8746639999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">cos</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></p>
+<p>多行公式：</p>
+<pre><code class="language-math">\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
+</code></pre>
+<pre><code class="language-katex">\displaystyle 
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        } 
+    }
+</code></pre>
+<pre><code class="language-latex">f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+</code></pre>
+<h3 id="分页符-page-break">分页符 Page break</h3>
+<blockquote>
+<p>Print Test: Ctrl + P</p>
+</blockquote>
+<p>[========]</p>
+<h3 id="绘制流程图-flowchart">绘制流程图 Flowchart</h3>
+<pre><code class="language-flow">st=&gt;start: 用户登陆
+op=&gt;operation: 登陆操作
+cond=&gt;condition: 登陆成功 Yes or No?
+e=&gt;end: 进入后台
+
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op
+</code></pre>
+<p>[========]</p>
+<h3 id="绘制序列图-sequence-diagram">绘制序列图 Sequence Diagram</h3>
+<pre><code class="language-seq">Andrew-&gt;China: Says Hello 
+Note right of China: China thinks\nabout it 
+China--&gt;Andrew: How are you? 
+Andrew-&gt;&gt;China: I am good thanks!
+</code></pre>
+<h3 id="end">End</h3>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mx.315996.xyz/post-images/uqLLoi7ukt.webp');"></div>
+                 <a href="https://mx.315996.xyz/post/uqLLoi7ukt/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2025-04-30">2025-04-30</time>
+                  <h4 class="title white no-margin">202504学生事件汇总</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mx.315996.xyz/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo.315996.xyz/',
+    el: '#tcomment',
+  })
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="published border-effect">
+          ©2019 共 27 篇文章
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </div>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+
+      
+    <script src="https://mx.315996.xyz/media/js/functions-post.js"></script>
+
+    <script>
+      // 计算文章字数和阅读时间
+      document.addEventListener('DOMContentLoaded', function() {
+        const contentText = document.getElementById('post-content-text');
+        if (contentText) {
+          // 获取纯文本内容
+          const text = contentText.innerText || contentText.textContent || '';
+          // 计算中文字符数（包括标点）
+          const cnChars = text.match(/[\u4e00-\u9fa5]/g) || [];
+          // 计算英文单词数
+          const enWords = text.match(/[a-zA-Z]+/g) || [];
+          // 总字数 = 中文字符 + 英文单词
+          const wordCount = cnChars.length + enWords.length;
+          
+          // 阅读时间（按每分钟300字计算）
+          const readTime = Math.max(1, Math.ceil(wordCount / 300));
+          
+          // 更新显示
+          const wordCountEl = document.getElementById('word-count');
+          const readTimeEl = document.getElementById('read-time');
+          
+          if (wordCountEl) wordCountEl.textContent = wordCount;
+          if (readTimeEl) readTimeEl.textContent = readTime;
+        }
+        
+        // 从封面图提取主色调
+        const postHeader = document.getElementById('post-header');
+        const featureImage = 'https://i1.wp.com/dev.bsgun.cn/i/2025/12/13/422174.webp';
+        
+        if (featureImage && postHeader) {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 1;
+            canvas.height = 1;
+            ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 1, 1);
+            
+            try {
+              const pixel = ctx.getImageData(0, 0, 1, 1).data;
+              const r = pixel[0];
+              const g = pixel[1];
+              const b = pixel[2];
+              
+              // 调整亮度，使颜色更鲜艳
+              const factor = 1.2;
+              const adjustedR = Math.min(255, Math.round(r * factor));
+              const adjustedG = Math.min(255, Math.round(g * factor));
+              const adjustedB = Math.min(255, Math.round(b * factor));
+              
+              postHeader.style.backgroundColor = `rgb(${adjustedR}, ${adjustedG}, ${adjustedB})`;
+            } catch (e) {
+              // 如果提取失败，使用默认主题色
+              postHeader.style.backgroundColor = '#105080';
+            }
+          };
+          img.onerror = function() {
+            // 图片加载失败时使用默认主题色
+            postHeader.style.backgroundColor = '#105080';
+          };
+          img.src = featureImage;
+        }
+      });
+    </script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>

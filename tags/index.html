@@ -1,0 +1,523 @@
+<html>
+  <head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>标签 | Gridea</title>
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://mx.315996.xyz/favicon.ico">
+<link rel="stylesheet" href="https://mx.315996.xyz/styles/main.css">
+
+<script src="https://mx.315996.xyz/media/js/jquery.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/masonry.pkgd.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/aos.js"></script>
+<script src="https://mx.315996.xyz/media/js/pace.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/view-image.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://mx.315996.xyz/media/js/functions.js"></script>
+<script>
+  // 所有文章数据（排除隐藏文章）
+  window.allPosts = [
+    
+      
+        {
+          title: '网站公告',
+          link: 'https://mx.315996.xyz/post/nTTpaiquXt/',
+          fileName: 'nTTpaiquXt'
+        },
+      
+    
+      
+        {
+          title: 'LaunchNext',
+          link: 'https://mx.315996.xyz/post/2u8mrEiID7/',
+          fileName: '2u8mrEiID7'
+        },
+      
+    
+      
+        {
+          title: '辟邪',
+          link: 'https://mx.315996.xyz/post/000016/',
+          fileName: '000016'
+        },
+      
+    
+      
+        {
+          title: '义和团',
+          link: 'https://mx.315996.xyz/post/000015/',
+          fileName: '000015'
+        },
+      
+    
+      
+        {
+          title: '我要验牌',
+          link: 'https://mx.315996.xyz/post/000014/',
+          fileName: '000014'
+        },
+      
+    
+      
+        {
+          title: '唐永平',
+          link: 'https://mx.315996.xyz/post/000013/',
+          fileName: '000013'
+        },
+      
+    
+      
+        {
+          title: '卞国泉',
+          link: 'https://mx.315996.xyz/post/000012/',
+          fileName: '000012'
+        },
+      
+    
+      
+        {
+          title: '孙莉',
+          link: 'https://mx.315996.xyz/post/000011/',
+          fileName: '000011'
+        },
+      
+    
+      
+        {
+          title: '刘智辰',
+          link: 'https://mx.315996.xyz/post/000010/',
+          fileName: '000010'
+        },
+      
+    
+      
+        {
+          title: 'Note 17. 性能加速',
+          link: 'https://mx.315996.xyz/post/pai2fiCnOi/',
+          fileName: 'pai2fiCnOi'
+        },
+      
+    
+      
+        {
+          title: '户晨风',
+          link: 'https://mx.315996.xyz/post/000009/',
+          fileName: '000009'
+        },
+      
+    
+      
+        {
+          title: '七十七',
+          link: 'https://mx.315996.xyz/post/000008/',
+          fileName: '000008'
+        },
+      
+    
+      
+        {
+          title: '吴海宁',
+          link: 'https://mx.315996.xyz/post/000006/',
+          fileName: '000006'
+        },
+      
+    
+      
+        {
+          title: '石金香',
+          link: 'https://mx.315996.xyz/post/0007/',
+          fileName: '0007'
+        },
+      
+    
+      
+        {
+          title: '王子怡',
+          link: 'https://mx.315996.xyz/post/000005/',
+          fileName: '000005'
+        },
+      
+    
+      
+        {
+          title: '红岩',
+          link: 'https://mx.315996.xyz/post/0004/',
+          fileName: '0004'
+        },
+      
+    
+      
+        {
+          title: 'ChatGPT Atlas 浏览器上手',
+          link: 'https://mx.315996.xyz/post/xu4cRvA6KX/',
+          fileName: 'xu4cRvA6KX'
+        },
+      
+    
+      
+        {
+          title: '王子铭',
+          link: 'https://mx.315996.xyz/post/000003/',
+          fileName: '000003'
+        },
+      
+    
+      
+        {
+          title: '卞羽曦',
+          link: 'https://mx.315996.xyz/post/000002/',
+          fileName: '000002'
+        },
+      
+    
+      
+        {
+          title: '黄晋鹏',
+          link: 'https://mx.315996.xyz/post/000001/',
+          fileName: '000001'
+        },
+      
+    
+      
+        {
+          title: '重点关爱（家访）学生',
+          link: 'https://mx.315996.xyz/post/7UCVAYPAk3/',
+          fileName: '7UCVAYPAk3'
+        },
+      
+    
+      
+        {
+          title: '202504学生事件汇总',
+          link: 'https://mx.315996.xyz/post/uqLLoi7ukt/',
+          fileName: 'uqLLoi7ukt'
+        },
+      
+    
+      
+        {
+          title: '入站必读',
+          link: 'https://mx.315996.xyz/post/hi/',
+          fileName: 'hi'
+        },
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  ];
+  
+  // Modern Header Functions
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+      });
+    }
+    
+    // Back to top from header with scroll percentage
+    const headerBackToTop = document.getElementById('header-back-to-top');
+    const scrollPercentEl = headerBackToTop ? headerBackToTop.querySelector('.scroll-percent') : null;
+    
+    if (headerBackToTop) {
+      // Click to scroll to top
+      headerBackToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Update scroll percentage
+      function updateScrollPercent() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        if (docHeight <= 0) {
+          headerBackToTop.classList.remove('visible');
+          return;
+        }
+        
+        const percent = Math.min(100, Math.max(0, Math.round((scrollTop / docHeight) * 100)));
+        
+        if (scrollPercentEl) {
+          scrollPercentEl.textContent = percent;
+        }
+        
+        if (scrollTop <= 10) {
+          headerBackToTop.classList.remove('visible');
+        } else {
+          headerBackToTop.classList.add('visible');
+        }
+      }
+      
+      // Initial check
+      updateScrollPercent();
+      
+      // Update on scroll
+      window.addEventListener('scroll', updateScrollPercent, { passive: true });
+    }
+    
+    // Random post - 随机逛逛（桌面端和移动端）
+    function goToRandomPost() {
+      if (window.allPosts && window.allPosts.length > 0) {
+        const availablePosts = window.allPosts.filter(function(post) {
+          return post && post.link;
+        });
+        if (availablePosts.length > 0) {
+          const randomIndex = Math.floor(Math.random() * availablePosts.length);
+          const randomPost = availablePosts[randomIndex];
+          if (randomPost && randomPost.link) {
+            window.location.href = randomPost.link;
+          }
+        }
+      }
+    }
+    
+    const randomPostBtn = document.querySelector('.random-post');
+    if (randomPostBtn) {
+      randomPostBtn.addEventListener('click', goToRandomPost);
+    }
+    
+    // 移动端菜单中的随机逛逛
+    const mobileRandomPostBtn = document.querySelector('.mobile-random-post');
+    if (mobileRandomPostBtn) {
+      mobileRandomPostBtn.addEventListener('click', goToRandomPost);
+    }
+    
+    // Control panel (placeholder)
+    const controlPanelBtn = document.querySelector('.control-panel');
+    if (controlPanelBtn) {
+      controlPanelBtn.addEventListener('click', function() {
+        // 可以在这里添加中控台功能
+        console.log('Control panel clicked');
+      });
+    }
+    
+    // 移动端点击搜索时自动关闭菜单
+    const mobileSearchLinks = document.querySelectorAll('.mobile-menu a[href="#search-lightbox"]');
+    mobileSearchLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (mobileMenu) {
+          mobileMenu.classList.remove('active');
+        }
+      });
+    });
+    
+    // 搜索弹窗功能
+    const searchLightbox = document.getElementById('search-lightbox');
+    const searchBtns = document.querySelectorAll('a[href="#search-lightbox"]');
+    
+    // 打开搜索弹窗
+    searchBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (searchLightbox) {
+          searchLightbox.classList.add('search-open');
+          const searchInput = searchLightbox.querySelector('#s');
+          if (searchInput) {
+            setTimeout(function() {
+              searchInput.focus();
+            }, 100);
+          }
+        }
+      });
+    });
+    
+    // 点击背景关闭搜索弹窗
+    if (searchLightbox) {
+      searchLightbox.addEventListener('click', function(e) {
+        if (e.target === searchLightbox) {
+          searchLightbox.classList.remove('search-open');
+        }
+      });
+      
+      // ESC键关闭搜索弹窗
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchLightbox.classList.contains('search-open')) {
+          searchLightbox.classList.remove('search-open');
+        }
+      });
+      
+      // 搜索表单提交
+      const searchForm = document.getElementById('gridea-search-form');
+      if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const searchInput = searchForm.querySelector('#s');
+          if (searchInput && searchInput.value.trim()) {
+            window.location.href = '/search/index.html?q=' + encodeURIComponent(searchInput.value.trim());
+          }
+        });
+      }
+    }
+  });
+</script>
+</head>
+  </head>
+  <body>
+    <!-- start: #wrapper -->
+    <div class="wrapper">
+      
+            <header id="header" class="modern-header">
+        <div class="header-container">
+          <!-- 左侧：头像和名字 -->
+          <div class="header-brand">
+            <a href="https://mx.315996.xyz" class="brand-link">
+              <img src="https://mx.315996.xyz/images/avatar.png" alt="Gridea" class="brand-avatar">
+              <span class="brand-name">Gridea</span>
+            </a>
+          </div>
+
+          <!-- 中间：菜单 -->
+          <nav class="header-nav">
+            <ul class="nav-menu">
+              <li class="">
+                <a href="https://mx.315996.xyz">首页</a>
+              </li>
+              
+                <li>
+                  <a href="/archives">归档</a>
+                </li>
+              
+                <li>
+                  <a href="/tags">标签</a>
+                </li>
+              
+                <li>
+                  <a href="/friends">友链</a>
+                </li>
+              
+                <li>
+                  <a href="/post/about">关于</a>
+                </li>
+              
+            </ul>
+          </nav>
+
+          <!-- 右侧：随机文章、搜索、回到顶部 -->
+          <div class="header-actions">
+            <a href="javascript:void(0)" class="action-btn random-post" title="随机逛逛">
+              <svg class="icon-shuffle" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="currentColor" d="M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z"/>
+              </svg>
+            </a>
+            <a href="#search-lightbox" class="action-btn search-btn lightbox mfp-inline" title="搜索">
+              <i class="fa fa-search"></i>
+            </a>
+            <a href="javascript:void(0)" id="header-back-to-top" class="action-btn back-to-top" title="回到顶部">
+              <span class="scroll-percent">0</span>
+              <i class="fa fa-arrow-up"></i>
+            </a>
+            <!-- 移动端菜单按钮（放在header-actions内） -->
+            <div class="mobile-menu-toggle">
+              <i class="fa fa-bars"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 移动端菜单 -->
+        <div class="mobile-menu">
+          <ul class="mobile-nav-menu">
+            <li class="">
+              <a href="https://mx.315996.xyz">首页</a>
+            </li>
+            
+              <li>
+                <a href="/archives">归档</a>
+              </li>
+            
+              <li>
+                <a href="/tags">标签</a>
+              </li>
+            
+              <li>
+                <a href="/friends">友链</a>
+              </li>
+            
+              <li>
+                <a href="/post/about">关于</a>
+              </li>
+            
+            <li class="mobile-menu-divider"></li>
+            <li class="mobile-menu-action">
+              <a href="javascript:void(0)" class="mobile-random-post">
+                <svg class="icon-shuffle" viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="currentColor" d="M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z"/>
+                </svg>
+                <span>随机逛逛</span>
+              </a>
+            </li>
+            <li class="mobile-menu-action">
+              <a href="#search-lightbox" class="lightbox mfp-inline">
+                <i class="fa fa-search"></i>
+                <span>搜索</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- 搜索弹窗 -->
+      <div id="search-lightbox" class="mfp-hide">
+        <div class="search-modal">
+          <div class="search-modal-header">
+            <h3 class="search-modal-title">搜索文章</h3>
+          </div>
+          <div class="search-modal-body">
+            <form id="gridea-search-form" data-update="1771503393672" action="/search/index.html" class="search-form">
+              <div class="search-input-wrapper">
+                <input type="text" name="q" id="s" value="" class="search-field" placeholder="输入关键词搜索..." aria-label="输入关键词搜索..." required="">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <main id="tags-page" class="main">
+        <div class="grid-container">
+          <div class="tags-wrapper">
+            <h1 class="tags-title">标签</h1>
+            <div class="tags-list">
+              
+                
+                  
+                  <a href="https://mx.315996.xyz/tag/YIwO87EdNu/" class="tag-item" data-count="9">
+                    <span class="tag-hash">#</span>
+                    <span class="tag-name">词条</span>
+                    <span class="tag-count">9</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      </main>
+
+        <footer id="footer" class="grid-container">
+        <div class="published border-effect">
+          ©2019 共 27 篇文章
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </div>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>
